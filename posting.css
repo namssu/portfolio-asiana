@@ -1,0 +1,803 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  word-break: keep-all;
+  outline: 0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: black;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h4 {
+  font-size: 1.15rem;
+}
+
+a:link {
+  color: #666;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: red;
+}
+
+button {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: none;
+  background: white;
+  /* cursor: pointer; */
+  transition: 0.3s;
+  font-weight: bold;
+  z-index: 1;
+}
+
+ul li {
+  list-style: none;
+}
+
+/*design*/
+article {
+  padding: 80px 5%;
+}
+
+article> :first-child {
+  margin-bottom: 80px;
+}
+
+.qna> :first-child, .board> :first-child, .qna-list> :first-child, .news> :first-child {
+  margin-bottom: 80px;
+}
+
+section {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 40px 5%;
+  margin-bottom: 60px;
+}
+
+input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  position: relative;
+  top: 0px;
+  margin-right: 5px;
+}
+
+input[type="file"] {
+  width: auto;
+  border: none;
+}
+
+input[type="radio"] {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  margin-right: 8px;
+}
+
+select {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+textarea {
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 12px;
+  resize: none;
+  margin: 20px 0;
+}
+
+.none-mo {
+  display: none;
+}
+
+.space-betweens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f-d-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-wraps {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.f-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 폼 필수항목 */
+.neccessary::after {
+  content: "*";
+  color: red;
+}
+
+/* 버튼 두가지 타입 */
+.asiana-button {
+  background: #d60815;
+  color: #fff;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.button-default {
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-right: 8px;
+  border-radius: 5px;
+}
+
+/* 목록 인덱스 */
+.menu-index {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 30px;
+}
+
+.menu-index div {
+  padding: 0 15px 0;
+  cursor: pointer;
+  color: #999;
+}
+
+.numberPic {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d60815 !important;
+}
+
+.numberPic::after {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  background: #d60815;
+  width: 23px;
+  height: 4px;
+}
+
+/* 이미지 호버 확대 */
+.image-scales {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.image-scales img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+
+.small-p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* qna 플러스 아이콘 */
+.qna-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: url('img/posting-icon-add-file.png') no-repeat center/contain;
+  margin-left: 10px;
+}
+
+/* mobile start */
+
+.board :nth-child(2) div label {
+  width: 60px;
+  height: 60px;
+  background: #f9f9f9;
+  border: 1px solid #f9f9f9;
+  margin-right: 10px;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.board :nth-child(2) div label:hover {
+  background: #eee;
+  border: 1px solid #ddd;
+}
+
+.board :nth-child(2) div label img {
+  position: absolute;
+  width: 14px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.board :nth-child(2) div input[type="file"] {
+  display: none;
+}
+
+.board> :nth-child(2)> :last-child {
+  margin-top: 20px;
+}
+
+.board> :nth-child(3) div h4 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.board> :nth-child(3) div p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.board> :nth-child(3)> :nth-child(2)> :nth-child(3) {
+  border-top: 2px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.board :nth-child(3)>:nth-child(2) :nth-child(3)> :last-child div {
+  margin-left: 5px;
+}
+
+.board> :nth-child(3)> :nth-child(2)>img {
+  width: 100%;
+  margin: 0 auto 15px;
+  display: block;
+  max-width: 500px;
+}
+
+.board>:nth-child(3)> :nth-child(2)> :last-child {
+  padding: 80px 0 50px;
+  border-bottom: 2px solid #ddd;
+}
+
+.board :nth-child(3) :nth-child(2)> :last-child div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.board :nth-child(3) :nth-child(2)> :last-child div:hover {
+  background-color: black;
+}
+
+.board :nth-child(3) :nth-child(2)> :last-child :first-child {
+  background: url('img/icon-posting-like.png') no-repeat center #555;
+  background-size: 15px;
+  margin-right: 1rem;
+}
+
+.board :nth-child(3) :nth-child(2)> :last-child :last-child {
+  background: url('img/icon-posting-share.png') no-repeat center #555;
+  background-size: 15px;
+}
+
+.board> :nth-child(3)> :nth-child(3)> :nth-child(2),
+.board> :nth-child(3)> :nth-child(3)> :nth-child(3) {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  align-items: start;
+}
+
+.board> :nth-child(3)> :nth-child(3)> :first-child {
+  margin: 20px 0 10px;
+}
+
+.board> :nth-child(3)> :nth-child(3)> :nth-child(2)> :first-child,
+.board> :nth-child(3)> :nth-child(3)> :nth-child(3)> :first-child {
+  align-items: start;
+}
+
+.board> :nth-child(3)> :nth-child(3)> :nth-child(2)> :first-child img,
+.board :nth-child(3) :nth-child(3) :nth-child(3)> :first-child img {
+  width: 30px;
+  margin-right: 15px;
+}
+
+.board :nth-child(3) :nth-child(3) :nth-child(2) :first-child :nth-child(2) :not(:first-child),
+.board :nth-child(3) :nth-child(3) :nth-child(3) :first-child :nth-child(2) :not(:first-child) {
+  color: #999;
+  margin-top: 10px;
+}
+
+.board> :nth-child(3)> :nth-child(3)> :nth-child(2)> :last-child,
+.board :nth-child(3) :nth-child(3) :nth-child(3)> :last-child {
+  width: 20px;
+}
+
+.board> :nth-child(3)> :nth-child(3) textarea {
+  margin: 30px 0;
+  height: 100px;
+}
+
+.board> :nth-child(3)> :nth-child(3) :nth-child(5) input[type="checkbox"] {
+  margin-top: 0;
+}
+
+.board> :nth-child(3)> :nth-child(3) :nth-child(5) button {
+  width: 130px;
+}
+
+.board> :nth-child(3)> :last-child {
+  margin-top: 40px;
+}
+
+.board> :nth-child(3)> :last-child> :first-child {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+}
+
+.board> :nth-child(3)> :last-child> :not(:first-child) {
+  color: #999;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  align-items: start;
+}
+
+.board :nth-child(3)> :last-child :not(:first-child) div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 92px;
+}
+
+.board :nth-child(3)> :last-child :not(:first-child) img {
+  width: 130px;
+  margin-left: 10px;
+}
+
+
+
+.board> :nth-child(4)>div {
+  cursor: pointer;
+  padding: 20px 0 10px;
+}
+
+.board> :nth-child(4)>div:hover :first-child img {
+  transform: scale(1.4);
+}
+
+.board :nth-child(4) div p {
+  color: #555;
+}
+
+.board> :nth-child(4)>div> :last-child> :last-child {
+  margin-top: 12px;
+}
+
+.board> :nth-child(4)> :last-child {
+  margin-top: 30px;
+}
+
+
+
+.qna> :nth-child(2)>div {
+  padding-top: 15px;
+}
+
+.qna> :nth-child(2) :nth-child(2) div {
+  margin-top: 10px;
+}
+
+.qna :nth-child(2) :nth-child(2) div label,
+.qna> :nth-child(2)> :last-child label {
+  margin-right: 8px;
+}
+
+.qna :nth-child(2) :nth-child(3) p {
+  margin-bottom: 0;
+}
+
+.qna :nth-child(2) :nth-child(5) textarea {
+  margin: 10px 0;
+}
+
+.qna> :nth-child(2)> :nth-child(6) input {
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.qna> :nth-child(2)> :last-child {
+  margin-top: 15px;
+}
+
+.qna> :nth-child(2)> :last-child> :nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.qna> :nth-child(2)> :last-child button {
+  margin-top: 30px;
+}
+
+.qna> :nth-child(3) {
+  text-align: center;
+}
+
+.qna> :nth-child(3) img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.qna :nth-child(3) p {
+  margin: 15px 0 30px;
+}
+
+.qna> :nth-child(3) div :last-child {
+  white-space: nowrap;
+}
+
+
+
+.qna-to>h3 {
+  margin-bottom: 20px;
+}
+
+.qna-to>div:nth-child(2) {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.text-red {
+  color: #d60815;
+  font-weight: 700;
+}
+
+.qna-to details[open] img {
+  transform: rotate(180deg);
+}
+
+.qna-to details>summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.qna-to details>summary img {
+  width: 10px;
+  margin-left: 10px;
+}
+
+.qna-to details>summary>div {
+  display: flex;
+  align-items: center;
+}
+
+.qna-to details>summary>div:nth-child(2)>div:nth-child(1) {
+  display: none;
+}
+
+.qna-to details>summary>div:nth-child(1)>div:nth-child(1) {
+  width: 80px;
+  min-width: 57px;
+  text-align: center;
+  font-size: 0.8rem;
+  background: #d60815;
+  color: #fff;
+  padding: 4px;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.to-wait>summary>div:nth-child(1)>div:nth-child(1) {
+  background: #666 !important;
+}
+
+.to-wait>div:nth-child(3)>div {
+  display: none;
+}
+
+.to-wait>div:nth-child(3)>p {
+  color: #666;
+}
+
+.qna-to details>summary>div:nth-child(2)>div:nth-child(1) {
+  color: #888;
+}
+
+.qna-to details>div {
+  padding: 15px 25px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.4rem;
+}
+
+.qna-to details>div>div {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+.news> :first-child p {
+  text-align: center;
+}
+
+.news :nth-child(2) :first-child p {
+  margin-bottom: 15px;
+}
+
+.news :nth-child(2) :first-child p span {
+  color: #d60815;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.news :nth-child(2) :first-child select {
+  width: 100%;
+  max-width: 100px;
+  margin-right: 15px;
+  background-position: 90%;
+}
+
+.news :nth-child(2) :first-child input {
+  background: url('img/posting-icon-search.png') no-repeat 97%;
+  background-size: 20px;
+}
+
+.news :nth-child(2) div div p {
+  color: #555;
+}
+
+.news> :nth-child(2)> :not(:first-child, :last-child) {
+  padding: 15px 0;
+  margin-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.news> :nth-child(2)> :not(:first-child, :last-child)> :first-child {
+  position: relative;
+  height: 200px;
+  margin-bottom: 15px;
+  background-size: cover;
+}
+
+.news> :nth-child(2)> :not(:first-child, :last-child)> :first-child::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: "+";
+  background: #d60815;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 40px;
+  text-align: center;
+}
+
+.news> :nth-child(2)> :not(:first-child, :last-child):hover :first-child img {
+  transform: scale(1.4);
+}
+
+.news> :nth-child(2)> :not(:first-child, :last-child)> :last-child :nth-child(2) {
+  margin-bottom: 12px;
+}
+
+
+
+.qna-list> :first-child p {
+  text-align: center;
+}
+
+.qna-list section .listtap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.qna-list section .listtap div {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 8px 0px;
+  font-weight: bold;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  width: 110px;
+  text-align: center;
+}
+
+.qna-list>section .listtap div:hover {
+  color: #d60815;
+  border-color: #d60815;
+}
+
+.qna-list section> :not(:first-child)>div> :first-child {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 18px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+}
+
+.qna-list section> :not(:first-child)>div> :last-child {
+  padding: 25px 10px;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+  background: #f3f3f3;
+}
+
+.qna-list section> :not(:first-child)>div>div> :first-child {
+  padding: 8px;
+  text-align: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  background: #e1e1e1;
+  margin-right: 15px;
+  color: #6d6e70;
+}
+
+.qna-list section> :not(:first-child)>div> :last-child> :first-child {
+  background: #6d6e70;
+  color: white;
+}
+
+.qna-list section> :not(:first-child)>div> :last-child> :last-child {
+  width: 30px;
+  height: 30px;
+}
+
+.qna-list section> :not(:first-child)>div>div :nth-child(2) {
+  width: 80%;
+}
+
+.qna-list section> :not(:nth-child(2), :nth-child(1)) {
+  display: none;
+}
+
+.tapsee {
+  color: #d60815;
+  border-color: #d60815 !important;
+}
+
+.listsee {
+  display: flex !important;
+}
+
+/* laptop start */
+
+@media screen and (min-width: 1366px) {
+
+  section {
+    padding: 80px 5%;
+    margin-bottom: 100px;
+  }
+
+  .none-mo {
+    display: block;
+  }
+
+  .space-betweens-top-p {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .space-betweens-top-p>div {
+    width: 48%;
+  }
+
+  /* design-end */
+
+  .board,
+  .news,
+  .qna-list,
+  .qna {
+    padding: 130px 0;
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .news> :nth-child(2)> :first-child {
+    align-items: center;
+  }
+
+  .news :nth-child(2) :first-child select,
+  .news :nth-child(2) :first-child input {
+    margin-top: 0;
+  }
+
+  .news :nth-child(2) :first-child p {
+    margin-bottom: 0;
+  }
+}
+
+
+/* end */

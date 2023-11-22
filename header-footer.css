@@ -1,0 +1,566 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    word-break: keep-all;
+    outline: 0px solid silver;
+}
+
+img {
+    width: 100px;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    color: black;
+    letter-spacing: 0.1px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+a:link {
+    color: #666;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #666;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: red;
+}
+
+button {
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: none;
+    background: white;
+    /* cursor: pointer; */
+    transition: 0.3s;
+    font-weight: bold;
+    z-index: 1;
+}
+
+ul li {
+    list-style: none;
+}
+
+/*design*/
+article {
+    padding: 80px 5%;
+}
+
+article> :first-child {
+    margin-bottom: 20px;
+}
+
+article>p {
+    margin-bottom: 30px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.none-mo {
+    display: none;
+}
+
+.space-betweens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f-d-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-wraps {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.f-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#openIcon {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#openIcon span {
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 22px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+#openIcon :first-child {
+    top: 10px;
+    right: 0;
+}
+
+#openIcon :nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    right: 0;
+}
+
+#openIcon :last-child {
+    bottom: 10px;
+    right: 0;
+}
+
+/* design */
+header {
+    position: relative;
+    background: none;
+    z-index: 100;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 20px 30px 5px rgba(0, 0, 0, 0.05);
+}
+
+.fixed #openIcon span {
+    background: #000;
+}
+
+.fixed :first-child :last-child button {
+    border-color: #000;
+    color: #000;
+}
+
+header> :first-child {
+    padding: 20px 5%;
+    background: #2b2b2b;
+}
+
+header> :first-child picture img {
+    width: 150px;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+
+header :first-child :last-child button {
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+header .navContents {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    background: white;
+    height: 100vh;
+    z-index: 5;
+    transition: .3s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header .navContents> :first-child {
+    background: #3b3b3b;
+    color: white;
+    padding: 0 5%;
+}
+
+header .navContents> :first-child> :first-child {
+    padding: 22px 0 0;
+}
+
+header .navContents> :first-child> :first-child :first-child div {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+header .navContents> :first-child div div img {
+    width: 30px;
+    cursor: pointer;
+}
+
+header .navContents> :first-child> :first-child :last-child img {
+    filter: invert(100%);
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+header .navContents> :first-child> :last-child {
+    padding: 26px 0;
+    margin-top: 22px;
+    border-top: 1px solid #797979;
+}
+
+header .navContents> :first-child> :last-child div {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+header .navContents> :first-child> :last-child div span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+header .navContents> :first-child> :last-child button {
+    background: none;
+    padding: 8px 12px;
+    color: #ccc;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+header .navContents nav {
+    padding: 20px 5%;
+}
+
+header .navContents nav div {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 0;
+    border-bottom: 1px solid #ebebeb;
+    cursor: pointer;
+}
+
+header .navContents> :nth-child(3),
+header .navContents> :nth-child(4) {
+    padding: 0 5%;
+    color: #dbdbdb;
+    font-size: 0.9rem;
+}
+
+header .navContents> :nth-child(3) {
+    margin-top: 20px;
+}
+
+header .navContents> :nth-child(3)>div,
+header .navContents> :nth-child(4)>div {
+    width: 50%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 12px 0;
+    background: #2b2b2b;
+}
+
+header .navContents> :nth-child(3)> :last-child,
+header .navContents> :nth-child(4)> :last-child {
+    margin-right: 0;
+}
+
+header .navContents> :nth-child(3) div div,
+header .navContents> :nth-child(4) div div {
+    width: 20px;
+    height: 20px;
+    background: url('img/icon-index-main-icons.png');
+    margin-right: 10px;
+    background-size: 470px;
+}
+
+header .navContents> :nth-child(3) :first-child div {
+    background-position: -23px -70px;
+}
+
+header .navContents> :nth-child(3) :last-child div {
+    background-position: -23px -70px;
+}
+
+header .navContents> :nth-child(4) :first-child div {
+    width: 32px;
+    background-position: -35px -57px;
+    background-size: 400px;
+}
+
+header .navContents> :nth-child(4) :last-child div {
+    width: 25px;
+    height: 25px;
+    background-position: -77.5px -68px;
+}
+
+
+footer {
+    background: #2b2b2b;
+    font-size: 0.9rem;
+}
+
+footer ul {
+    padding: 30px 5%;
+}
+
+footer ul li {
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #dbdbdb;
+}
+
+footer ul :not(:last-child) {
+    position: relative;
+}
+
+footer ul :not(:last-child)::after {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    content: "";
+    width: 1px;
+    height: 15px;
+    background: #666;
+}
+
+footer> :nth-child(2) {
+    color: #808080;
+    text-align: center;
+    padding: 30px 5% 100px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    line-height: 1.5rem;
+}
+
+footer> :nth-child(2)>.select_menu {
+    position: relative;
+    margin-bottom: 10px;
+    vertical-align: center;
+    width: 120px;
+    margin: 0 auto;
+}
+
+footer> :nth-child(2)>.select_menu .accordion {
+    border-radius: 10px;
+    padding: 10px 0;
+    border: 1px solid #808080;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+footer> :nth-child(2)>.select_menu .accordion img {
+    width: 20px;
+    margin-left: 8px;
+}
+
+footer> :nth-child(2)>.select_menu ul {
+    margin-top: 0px;
+    border-radius: 5px;
+    border: 1px solid none;
+    background: #595959;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    position: absolute;
+    width: 100%;
+}
+
+footer> :nth-child(2)>.select_menu ul li:hover {
+    background: #b4b2b2;
+    color: black;
+    text-decoration: none;
+}
+
+footer> :nth-child(2)> :nth-child(3) {
+    margin: 15px 0;
+}
+
+footer> :nth-child(2)> :nth-child(3) button {
+    width: 100%;
+    padding: 15px auto 15 px 0px;
+    font-size: 0.7rem;
+    border: 1px solid #808080;
+    background: none;
+    color: #808080;
+}
+
+footer> :nth-child(2)> :nth-child(3) button img {
+    width: 20px;
+    filter: invert(60%);
+}
+
+footer> :nth-child(2)> :nth-child(3) button p {
+    white-space: nowrap;
+    margin-left: -10px;
+}
+
+footer> :nth-child(2)> :nth-child(3) :first-child {
+    margin-right: 20px;
+}
+
+footer> :nth-child(2)> :nth-child(4) {
+    margin: 20px 0;
+}
+
+footer> :nth-child(2)> :nth-child(4) div {
+    width: 25px;
+    height: 25px;
+    background: url('img/icon-footer-sns.png');
+    background-repeat: no-repeat;
+    background-size: auto 24px;
+    margin: 0 12px;
+}
+
+footer> :nth-child(2)> :nth-child(4) :first-child {
+    background: url('img/icon-footer-sns-youtube.png');
+    background-position: 0 -1px;
+    background-size: auto 24px;
+}
+
+footer> :nth-child(2)> :nth-child(4) :nth-child(2) {
+    background-position: -212px -1px;
+}
+
+footer> :nth-child(2)> :nth-child(4) :nth-child(3) {
+    background-position: 6px center;
+}
+
+footer> :nth-child(2)> :nth-child(4) :nth-child(4) {
+    background-position: -50px -1px;
+}
+
+footer> :nth-child(2)> :nth-child(4) :last-child {
+    background-position: -105px center;
+}
+
+
+@media screen and (min-width: 1366px) {
+
+    /* body {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    */
+
+    .f-d-center-p {
+        display: flex;
+        align-items: center;
+    }
+
+    .none-pc {
+        display: none;
+    }
+
+    .none-mo {
+        display: block;
+    }
+
+    #openIcon span {
+        height: 2px;
+        width: 22px;
+    }
+
+    /* end */
+    header {
+        background: #fff;
+        margin-bottom: 0px;
+        z-index: 100;
+    }
+
+    header> :first-child {
+        padding: 30px 10%;
+    }
+
+    header> :first-child> ul {
+        display: flex;
+        align-items: center;
+    }
+
+    header> :first-child ul li {
+        padding: 0 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+
+    header :first-child :last-child button {
+        font-size: 1rem;
+    }
+
+
+    footer {
+        background: #2b2b2b;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
+    footer ul {
+        padding: 30px 10%;
+    }
+
+    footer ul li {
+        padding: 0 8px;
+        font-size: 1rem;
+        color: #dbdbdb;
+    }
+
+    footer ul :not(:last-child)::after {
+        top: 10px;
+    }
+
+    footer> :nth-child(2) {
+        padding: 30px 10% 130px;
+    }
+
+    footer> :nth-child(2)> :first-child {
+        position: absolute;
+        right: 10%;
+    }
+
+    footer> :nth-child(2)> :nth-child(2) {
+        text-align: left;
+    }
+
+    footer> :nth-child(2)> :nth-child(3) {
+        margin: 25px 0 15px;
+    }
+
+}

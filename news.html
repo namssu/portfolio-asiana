@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>asiana-news</title>
+  <link rel="stylesheet" href="posting.css">
+  <link rel="stylesheet" href="header-footer.css">
+  <style type="text/css"></style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+</head>
+
+<body>
+
+  <div w3-include-header="header.html"></div>
+
+
+  <article class="news">
+
+    <div>
+      <h1>아시아나 소식</h1>
+      <p>아시아나항공의 소식을
+        한 눈에 모아보세요.</p>
+    </div>
+
+    <section>
+
+      <div class="space-betweens-top-p">
+        <p>총 <span>312</span>건</p>
+        <div class="f-d-center">
+          <select>
+            <option>전체</option>
+            <option>제목</option>
+            <option>내용</option>
+          </select>
+          <input type="text" placeholder="검색어를 입력하세요.">
+        </div>
+      </div>
+
+      <div class="space-betweens-top-p">
+        <div class="image-scales">
+          <img src="img/posting-news-pic-1.png">
+        </div>
+        <div>
+          <h4>아시아나항공, 「한국서비스품질지수」 항공부문 1위</h4>
+          <p>아시아나항공은 8일(수), 서울시 중구 롯데호텔 서울에서 개최된 「2023 KS-SQI)」시상식에서 항공부문 1위를 수상했다.
+
+          </p>
+          <p class="small-p">2023.11.09</p>
+        </div>
+      </div>
+
+      <div class="space-betweens-top-p">
+        <div class="image-scales">
+          <img src="img/posting-news-pic-2.png">
+        </div>
+        <div>
+          <h4>아시아 지역 4개국 항공사 조종사들 한자리에 모인다.</h4>
+          <p>아시아나항공(대표 원유석)이 11월 1일(수)부터 2일(목)까지 서울 강서구 아시아나항공 본사 교육훈련동에서 안전운항 강화를 위해 글로벌 협력을 다지는 「ASIA EBT ∙ CBTA 워크샵」을
+            개최했다.</p>
+          <p class="small-p">2023.11.02</p>
+        </div>
+      </div>
+
+      <div class="space-betweens-top-p">
+        <div class="image-scales">
+          <img src="img/posting-news-pic-3.png">
+        </div>
+        <div>
+          <h4>스타얼라이언스, 파리 샤를 드 골 공항에 신규 라운지 오픈</h4>
+          <p>아시아나항공이 속한 세계 최초, 최대 항공사 동맹체 스타얼라이언스(Star Alliance)가 10월 13일(금, 현지 시간) 프랑스 파리 샤를 드 골 공항에서 두 번째 스타얼라이언스 라운지를
+            공개했다. </p>
+          <p class="small-p">2023.10.24</p>
+        </div>
+      </div>
+
+      <div class="space-betweens-top-p">
+        <div class="image-scales">
+          <img src="img/posting-news-pic-4.png">
+        </div>
+        <div>
+          <h4>아시아나항공, 인천 용유해안에서 반려해변 환경정화 나서</h4>
+          <p>아시아나항공(대표 원유석)이 18일 (수), 인천 영종도 용유해안에서 반려해변 정화 활동에 나섰다.</p>
+          <p class="small-p">
+            2023.10.19
+          </p>
+        </div>
+      </div>
+
+      <div class="space-betweens-top-p">
+        <div class="image-scales">
+          <img src="img/posting-news-pic-5.png">
+        </div>
+        <div>
+          <h4>인천공항에 남방큰돌고래 등장, 아시아나 이색 이벤트 선보여</h4>
+          <p>아시아나항공은 4일(수) 인천국제공항 제1터미널 도착장에서 멸종 위기 동물 보호 인식 제고를 위해 만들어진 ‘지구를 사랑한 수하물(Handle with Love)’ 광고물을 깜짝 공개했다.
+          </p>
+          <p class="small-p">2023.10.06</p>
+        </div>
+      </div>
+
+      <div class="menu-index">
+        <div class="numberPic">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+
+    </section>
+
+  </article>
+
+
+  <script>
+    // 뉴스 넘버 클릭
+    const newsNumbers = document.querySelectorAll(".menu-index > div");
+
+    for (let i = 0; i < newsNumbers.length; i++) {
+      newsNumbers[i].addEventListener("click", function () {
+        clearNewsPage();
+        this.classList.add("numberPic");
+      });
+    }
+
+    function clearNewsPage() {
+      for (let i = 0; i < newsNumbers.length; i++) {
+        newsNumbers[i].classList.remove("numberPic");
+      }
+    }
+  </script>
+
+
+  <div w3-include-footer="footer.html"></div>
+
+  <script>
+    includeHEADER();
+    includeFOOTER();
+  </script>
+
+
+</body>
+
+</html>

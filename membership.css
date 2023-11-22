@@ -1,0 +1,795 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  word-break: keep-all;
+  outline: 0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: black;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+a:link {
+  color: #666;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: red;
+}
+
+button {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: none;
+  background: white;
+  /* cursor: pointer; */
+  transition: 0.3s;
+  font-weight: bold;
+  z-index: 1;
+}
+
+ul li {
+  list-style: none;
+}
+
+/*design*/
+article {
+  padding: 80px 5%;
+}
+
+article> :first-child {
+  margin-bottom: 20px;
+}
+
+.login> :first-child, .remove> :first-child {
+  margin-bottom: 80px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  position: relative;
+  top: 0px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-right: 8px;
+}
+
+input[type="button"] {
+  background: none;
+}
+
+input[type="button"].buttonactive {
+  background: #eee;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+select {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.none-mo {
+  display: none;
+}
+
+.space-betweens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f-d-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-wraps {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.f-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 폼 필수항목 */
+.neccessary::after {
+  content: "*";
+  color: red;
+}
+
+/* 버튼 2가지 타입 */
+.asiana-button {
+  background: #d60815;
+  color: #fff;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.button-default {
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-right: 8px;
+  border-radius: 5px;
+}
+
+/* 가입단계 표시 */
+.join-steps {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 130px;
+  align-items: start;
+}
+
+.join-steps>div {
+  flex-direction: column;
+}
+
+.join-steps>div> :first-child {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #999;
+  opacity: 0.5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.join-steps>div> :first-child img {
+  width: 40px;
+  filter: grayscale(10);
+  opacity: 0.5;
+}
+
+.join-steps>div> :last-child {
+  width: 70px;
+  font-size: 0.8rem;
+  letter-spacing: -1px;
+  margin-top: 8px;
+  color: #999;
+}
+
+.join-steps span {
+  width: 20px;
+  height: 20px;
+  background: url('img/icon-membership-joinsteps-arrow.svg') no-repeat center/cover;
+  margin: 0 8px;
+}
+
+.join-steps .join-current-step> :first-child {
+  border-color: #000;
+  opacity: 1;
+}
+
+.join-steps .join-current-step :first-child img {
+  opacity: 1;
+}
+
+.join-steps .join-current-step :last-child {
+  color: #000;
+}
+
+/* mobile start */
+
+.login h1 {
+  margin-bottom: 80px;
+}
+
+.login section> :first-child {
+  margin-bottom: 20px;
+}
+
+.login section> :first-child div {
+  position: relative;
+  width: 50%;
+  text-align: center;
+  padding: 0 12px;
+  background: #6d6e71;
+  color: #fff;
+  padding: 15px 0;
+  border: 1px solid #6d6e71;
+  cursor: pointer;
+}
+
+.login section> :first-child .tabmenu-color {
+  position: relative;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  border-bottom: none;
+}
+
+.login section> :first-child .tabmenu-color::after {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url('img/icon-membership-login-tab.png') no-repeat center/contain;
+}
+
+.login section> :first-child :last-child.tabmenu-color::after  {
+  left: 7%;
+}
+
+.login section> :nth-child(2)> :first-child {
+  margin-bottom: 10px;
+}
+
+.login section> :nth-child(2)> :nth-child(2)> :last-child,
+.login section> :nth-child(2)> :nth-child(3)> :last-child {
+  margin-top: 10px;
+}
+
+.login section :nth-child(2) :first-child div input {
+  margin-bottom: 0;
+  margin-right: 8px;
+}
+
+.login section :nth-child(2) :first-child div label {
+  width: auto;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.login section :nth-child(2) .login-common> :first-child {
+  margin-top: 20px;
+}
+
+.login section :nth-child(2) .login-common> :nth-child(2) {
+  margin: 10px 0 15px;
+}
+
+.login section :nth-child(2) .login-common> :nth-child(2) div div {
+  font-size: 0.9rem;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.login section :nth-child(2) .login-common :nth-child(2) div :first-child {
+  padding: 0 5px 0 0;
+}
+
+.login section :nth-child(2) .login-common :nth-child(2) div :not(:last-child) {
+  position: relative;
+}
+
+.login section :nth-child(2) .login-common :nth-child(2) div :not(:last-child)::after {
+  position: absolute;
+  right: 0px;
+  top: 6px;
+  content: "";
+  width: 1px;
+  height: 12px;
+  background: #999;
+}
+
+.login section :nth-child(2) .login-common :nth-child(2) button {
+  background: #6d6e70;
+  color: #fff;
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.login section :nth-child(2) .login-common> :nth-child(3) {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.login section> :nth-child(2)>.login-common> :last-child button {
+  font-size: 0.8rem;
+  color: #222;
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 8px 12px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.login section> :nth-child(2)> :last-child> :last-child :not(:last-child) {
+  margin-right: 8px;
+}
+
+.login section> :nth-child(2)> :last-child> :last-child button img {
+  width: 20px;
+}
+
+.login-guest button {
+  margin-top: 30px;
+}
+
+.login input[type="text"]:hover, .login input[type="password"]:hover {
+  border-color: #d60815;
+}
+
+.login input[type="text"]:focus, .login input[type="password"]:hover {
+  border-color: #000;
+}
+
+
+.joinus-title {
+  text-align: center;
+  padding: 0 5%;
+}
+
+.joinus> :nth-child(2) {
+  margin-top: 80px;
+}
+
+.joinus> :nth-child(3) {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 40px 30px;
+}
+
+.joinus> :nth-child(3)> :nth-child(2)> div> div{
+  align-items: start;
+}
+
+.joinus> :nth-child(3)> :nth-child(2)> div> div input {
+  margin-top: 6px;
+}
+
+.joinus> :nth-child(3)>div>p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.joinus> :nth-child(3)> :nth-child(2) {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.joinus> :nth-child(3)> :nth-child(2) div {
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+.joinus> :nth-child(3)> :nth-child(2) div span {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.joinus> :nth-child(3)> :nth-child(2)> :first-child>span {
+  display: none;
+}
+
+.joinus> :nth-child(3)> :nth-child(2)> :not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.joinus> :nth-child(3)> :last-child {
+  margin-top: 30px;
+}
+
+
+.joinus> :nth-child(5) {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 40px 30px;
+}
+
+.joinus> :nth-child(5) div p {
+  text-align: center;
+}
+
+.joinus> :nth-child(5) div p span {
+  font-size: 0.9rem;
+}
+
+.joinus> :nth-child(5)> :last-child>div {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto 0;
+}
+
+.joinus> :nth-child(5)> :last-child> :first-child {
+  margin-top: 30px;
+}
+
+.joinus> :nth-child(5)> :last-child>div> :first-child {
+  width: 60px;
+  height: 60px;
+  margin-right: 25px;
+  background: url('img/icon-membership-certify.png');
+  background-size: 600px;
+}
+
+.joinus> :nth-child(5)> :last-child> :first-child> :first-child {
+  background-position: -62px -103px;
+}
+
+.joinus> :nth-child(5)> :last-child> :last-child> :first-child {
+  background-position: -1px -103px;
+}
+
+.joinus> :nth-child(5)> :last-child>div> :last-child :first-child {
+  font-weight: bold;
+}
+
+.joinus> :nth-child(5)> :last-child>div :last-child p {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.joinus> :nth-child(5)> :last-child>div :last-child button {
+  width: auto;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+
+.joinus> :nth-child(7) {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 40px 30px;
+}
+
+.joinus> :nth-child(7)>div {
+  padding: 10px 0;
+}
+
+.joinus> :nth-child(7)> :nth-child(2) {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.joinus> :nth-child(7)> :nth-child(2) span {
+  color: red;
+}
+
+.joinus> :nth-child(7)> :nth-child(5) div :first-child {
+  margin-right: 8px;
+}
+
+.joinus> :nth-child(7)> :nth-child(6) div div {
+  width: 100%;
+}
+
+.joinus> :nth-child(7)> :nth-child(6) div div p {
+  margin: 5px 5px 0;
+  font-size: 0.8rem;
+}
+
+.joinus> :nth-child(7)> :nth-child(7) div {
+  align-items: start;
+}
+
+.joinus> :nth-child(7)> :nth-child(7) p {
+  font-size: 0.8rem;
+}
+
+.joinus> :nth-child(7)> :nth-child(7) div button {
+  width: auto;
+  margin-top: 10px;
+  margin-left: 8px;
+  width: 120px;
+  font-size: 0.9rem;
+}
+
+.joinus> :nth-child(7)> :nth-child(10) div {
+  align-items: start;
+}
+
+.joinus> :nth-child(7)> :nth-child(10) div button {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin-left: 8px;
+  white-space: nowrap;
+  width: 180px;
+  padding: 10px 0;
+}
+
+.joinus> :nth-child(7)> :nth-child(11) div span {
+  margin: 12px 5px 0;
+}
+
+.joinus> :nth-child(7)> :nth-child(12) span {
+  margin: 12px 5px 0;
+}
+
+.joinus> :nth-child(7)> :nth-child(13)>div> :first-child>input {
+  width: 150px;
+}
+
+.joinus> :nth-child(7)> :nth-child(13)>div> :first-child> div {
+  margin: 10px 0 0 8px;
+  font-size: 0.8rem;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  color: #333;
+  cursor: pointer;
+}
+
+.joinus> :nth-child(7)> :nth-child(13)>div> :first-child>div img {
+  width: 15px;
+  margin-left: 5px;
+  opacity: 0.8;
+}
+
+.joinus> :nth-child(7)> :nth-child(13)>div> :last-child p {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.joinus> :nth-child(7)> :nth-child(14)>div> :first-child {
+  margin-top: 5px;
+}
+
+.joinus> :nth-child(7)> :nth-child(14) div div :first-child {
+  margin-right: 8px;
+}
+
+.joinus> :nth-child(7)> :nth-child(14) div>p {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.joinus> :nth-child(7)> :last-child {
+  margin-top: 30px;
+  padding: 0;
+}
+
+
+.joinus> :last-child {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.joinus> :last-child>p {
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.joinus> :last-child> :nth-child(3)>div {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.joinus> :last-child> :nth-child(3)> :first-child {
+  border-top: 1px solid #ddd;
+}
+
+.joinus> :last-child> :last-child {
+  margin-top: 40px;
+}
+
+.joinus> :last-child> :last-child :first-child {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+
+.remove {
+  padding-top: 80px;
+}
+
+.remove h1 {
+  margin-bottom: 80px;
+}
+
+.remove section {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 40px 30px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.remove section> :last-child {
+  margin-top: 30px;
+}
+
+.remove :nth-child(2) p {
+  margin-bottom: 30px;
+}
+
+.remove> :nth-child(3)> :nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.remove :nth-child(3)> :nth-child(3),
+.remove :nth-child(3)> :nth-child(5) {
+  margin-top: 15px;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.remove :nth-child(3) textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-top: 10px;
+  resize: none;
+}
+
+.remove> :last-child img {
+  width: 50px;
+  margin: 15px 0;
+}
+
+
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.modal> div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: white;
+  width: 80%;
+  max-width: 500px;
+  height: 500px;
+  padding: 40px;
+  border-radius: 30px;
+}
+
+.modal> div> :first-child {
+  margin-bottom: 30px;
+}
+
+.modal> div> :first-child span {
+  color: #ab7d55;
+}
+
+.modal> div :first-child :first-child {
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  font-weight: bold;
+}
+
+.modal> div :first-child img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.modal> div> :last-child {
+  overflow-y: scroll;
+  height: 80%;
+  font-size: 0.9rem;
+  padding-right: 10px;
+}
+
+/* pc start */
+
+@media screen and (min-width: 1366px) {
+  article {
+    width: 600px;
+    padding: 130px 0;
+    margin: 0 auto;
+  }
+
+  .remove, .login, .joinus {
+    padding: 130px 0;
+  }
+
+  .remove> :first-child {
+    margin-bottom: 80px;
+  }
+
+  section {
+    padding: 80px 5%;
+    margin-bottom: 100px;
+  }
+
+  .f-d-center-p {
+    display: flex;
+    align-items: center;
+  }
+
+  .joinus> :nth-child(5)> :last-child>div {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .joinus> :nth-child(5)> :last-child> :first-child {
+    margin-right: 20px;
+  }
+
+  .login> section {
+    padding: 80px 0;
+  }
+  
+}
+
+/* end */

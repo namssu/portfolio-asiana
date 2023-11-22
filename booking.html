@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asiana-booking</title>
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+</head>
+
+
+<body>
+
+    <div w3-include-header="header.html"></div>
+
+
+    <article class="cebu-cost">
+
+        <div class="f-center-center">
+            <div>
+                <div class="uppcity">Icn</div>
+                <p>서울 / 인천</p>
+            </div>
+            <span class="flight-course"></span>
+            <div>
+                <div class="uppcity">Ceb</div>
+                <p>세부</p>
+            </div>
+        </div>
+
+        <div class="f-d-center">
+            <div class="f-center-center">
+                <p>2023.11</p>
+                <span class="f-center-center">489,800</span>
+            </div>
+            <div class="f-center-center">
+                <p>2023.12</p>
+                <span class="f-center-center">489,800</span>
+            </div>
+            <div class="f-center-center">
+                <p>2024.01</p>
+                <span class="f-center-center">623,000</span>
+            </div>
+            <div class="f-center-center">
+                <p>2024.02</p>
+                <span class="f-center-center">638,000</span>
+            </div>
+            <div class="f-center-center">
+                <p>2024.03</p>
+                <span class="f-center-center">463,000</span>
+            </div>
+        </div>
+
+    </article>
+
+
+
+    <article class="secondStep">
+
+        <div class="f-center-center steps">
+            <div>1</div>
+            <div class="current-step">2 항공편</div>
+            <div>3</div>
+        </div>
+
+        <!-- 첫번째 여정 -->
+        <div>
+            <div>
+                <div class="f-center-center itinerarys">
+                    <img src="img/icon-booking-plane-red.png">
+                    <div>첫 번째 여정</div>
+                </div>
+                <div class="f-center-center">
+                    <div class="f-d-center">
+                        <div class="uppcity">Icn</div>
+                        <p>서울 / 인천</p>
+                    </div>
+                    <span class="itinerarys-arrow"></span>
+                    <div class="f-d-center">
+                        <div class="uppcity">Ceb</div>
+                        <p>세부</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="f-center-center class-type">
+                <span class="tabMenu1 tabmenu-color1" onclick="openTabContents1(event,'economySpecial1')">이코노미 특가</span>
+                <span class="tabMenu1" onclick="openTabContents1(event,'economyBasic1')">이코노미 일반</span>
+                <span class="tabMenu1" onclick="openTabContents1(event,'business1')">비즈니스</span>
+            </div>
+
+            <!-- 이코노미특가 선택 시 -->
+            <div class="tabContents1" id="economySpecial1">
+
+                <div class="f-center-center datess">
+                    <div class="none-mo">
+                        <p>22 (금)</p>
+                        <p>234,600</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>23 (토)</p>
+                        <p>234,600</p>
+                    </div>
+                    <div>
+                        <p>24 (일)</p>
+                        <p>234,600</p>
+                    </div>
+                    <div class="select-date">
+                        <p>25 (월)</p>
+                        <p>234,600</p>
+                    </div>
+                    <div>
+                        <p>26 (화)</p>
+                        <p>234,600</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>27 (수)</p>
+                        <p>253,000</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>28 (목)</p>
+                        <p>253,000</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="space-betweens schedules">
+                        <div>
+                            <div>21:10</div>
+                            <p class="small-p">Icn</p>
+                        </div>
+                        <div>
+                            <p class="small-p">4시간 35분</p>
+                            <img src="img/icon-booking-flight-direction.svg">
+                        </div>
+                        <div>
+                            <div>00:45</div>
+                            <p class="small-p">Ceb</p>
+                        </div>
+                    </div>
+
+                    <div class="f-d-center fare-type">
+                        <div class="first-fare" onclick="openFareDetails1(event,'firstESFare1')">
+                            <p>특가운임</p>
+                            <span>234,600원</span>
+                            <p class="small-p">6석</p>
+                        </div>
+                        <div class="first-fare" onclick="openFareDetails1(event,'firstESFare2')">
+                            <p>할인운임</p>
+                            <span>253,000원</span>
+                            <p class="small-p">6석</p>
+                        </div>
+                        <div class="first-fare" onclick="openFareDetails1(event,'firstESFare3')">
+                            <p>실속운임</p>
+                            <span>273,000원</span>
+                            <p class="small-p">6석</p>
+                        </div>
+                    </div>
+                    <div class="fare-details">
+                        <ul class="flex-wraps first-details" id="firstESFare1">
+                            <li>1,321마일</li>
+                            <li>좌석승급불가</li>
+                            <li>환불위약금 200,000원</li>
+                            <li>재발행수수료 100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps first-details" id="firstESFare2">
+                            <li>1,321마일</li>
+                            <li>좌석승급불가</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps first-details" id="firstESFare3">
+                            <li>1,321마일</li>
+                            <li>좌석승급불가</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 이코노미일반 선택 시 -->
+            <div class="f-d-center-p tabContents1" id="economyBasic1" style="display: none;">
+
+                <div class="f-center-center datess">
+                    <div class="none-mo">
+                        <p>22 (금)</p>
+                        <p>253,000</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>23 (토)</p>
+                        <p>253,000</p>
+                    </div>
+                    <div>
+                        <p>24 (일)</p>
+                        <p>253,000</p>
+                    </div>
+                    <div class="select-date">
+                        <p>25 (월)</p>
+                        <p>253,000</p>
+                    </div>
+                    <div>
+                        <p>26 (화)</p>
+                        <p>253,000</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>27 (수)</p>
+                        <p>253,000</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>28 (목)</p>
+                        <p>253,000</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="space-betweens schedules">
+                        <div>
+                            <div>21:10</div>
+                            <p class="small-p">Icn</p>
+                        </div>
+                        <div>
+                            <p class="small-p">4시간 35분</p>
+                            <img src="img/icon-booking-flight-direction.svg">
+                        </div>
+                        <div>
+                            <div>00:45</div>
+                            <p class="small-p">Ceb</p>
+                        </div>
+                    </div>
+                    <div class="f-d-center fare-type">
+                        <div class="first-fare" onclick="openFareDetails1(event,'firstEBFare1')">
+                            <p>실속운임</p>
+                            <span>253,000원</span>
+                            <p class="small-p">6석</p>
+                        </div>
+                        <div class="first-fare" onclick="openFareDetails1(event,'firstEBFare2')">
+                            <p>할인운임</p>
+                            <span>303,000원</span>
+                            <p class="small-p">6석</p>
+                        </div>
+                        <div class="first-fare" onclick="openFareDetails1(event,'firstEBFare3')">
+                            <p>일반운임</p>
+                            <span>488,000원</span>
+                            <p class="small-p">9석</p>
+                        </div>
+                    </div>
+                    <div class="fare-details">
+                        <ul class="flex-wraps first-details" id="firstEBFare1">
+                            <li>1,321마일</li>
+                            <li>좌석승급불가</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps first-details" id="firstEBFare2">
+                            <li>1,887마일</li>
+                            <li>좌석승급불가</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps first-details" id="firstEBFare3">
+                            <li>1,887마일</li>
+                            <li>좌석승급가능</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 비즈니스 선택시  -->
+            <div class="tabContents1" id="business1" style="display: none;">
+                <div class="f-center-center datess">
+                    <div class="none-mo">
+                        <p>22 (금)</p>
+                        <p>539,600</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>23 (토)</p>
+                        <p>539,600</p>
+                    </div>
+                    <div>
+                        <p>24 (일)</p>
+                        <p>539,600</p>
+                    </div>
+                    <div class="select-date">
+                        <p>25 (월)</p>
+                        <p>539,600</p>
+                    </div>
+                    <div>
+                        <p>26 (화)</p>
+                        <p>539,600</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>27 (수)</p>
+                        <p>539,600</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>28 (목)</p>
+                        <p>539,600</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="space-betweens schedules">
+                        <div>
+                            <div>21:10</div>
+                            <p class="small-p">Icn</p>
+                        </div>
+                        <div>
+                            <p class="small-p">4시간 35분</p>
+                            <img src="img/icon-booking-flight-direction.svg">
+                        </div>
+                        <div>
+                            <div>00:45</div>
+                            <p class="small-p">Ceb</p>
+                        </div>
+                    </div>
+                    <div class="f-d-center fare-type">
+                        <div class="first-fare" onclick="openFareDetails1(event,'firstBFare1')">
+                            <p>특가운임</p>
+                            <span>539,600원</span>
+                            <p class="small-p">2석</p>
+                        </div>
+                        <div class="first-fare" onclick="openFareDetails1(event,'firstBFare2')">
+                            <p>할인운임</p>
+                            <span>573,000원</span>
+                            <p class="small-p">2석</p>
+                        </div>
+                        <div class="first-fare" onclick="openFareDetails1(event,'firstBFare3')">
+                            <p>일반운임</p>
+                            <span>894,600원</span>
+                            <p class="small-p">6석</p>
+                        </div>
+                    </div>
+                    <div class="fare-details">
+                        <ul class="flex-wraps first-details" id="firstBFare1">
+                            <li>1,887마일</li>
+                            <li style="display: hidden;">좌석승급가능</li>
+                            <li>환불위약금<br>250,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps first-details" id="firstBFare2">
+                            <li>1,887마일</li>
+                            <li>좌석승급가능</li>
+                            <li>환불위약금<br>250,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps first-details" id="firstBFare3">
+                            <li>2,359마일</li>
+                            <li>좌석승급가능</li>
+                            <li>환불위약금<br>250,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 두번째 여정 -->
+        <div>
+            <div>
+                <div class="f-center-center itinerarys">
+                    <img src="img/icon-booking-plane-red.png">
+                    <div>두 번째 여정</div>
+                </div>
+                <div class="f-center-center">
+                    <div class="f-d-center">
+                        <div class="uppcity">ceb</div>
+                        <p>세부</p>
+                    </div>
+                    <span class="itinerarys-arrow"></span>
+                    <div class="f-d-center">
+                        <div class="uppcity">Icn</div>
+                        <p>서울 / 인천</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="f-center-center class-type">
+                <span class="tabMenu2 tabmenu-color2" onclick="openTabContents2(event,'economySpecial2')">이코노미
+                    특가</span>
+                <span class="tabMenu2" onclick="openTabContents2(event,'economyBasic2')">이코노미 일반</span>
+                <span class="tabMenu2" onclick="openTabContents2(event,'business2')">비즈니스</span>
+            </div>
+
+            <!-- 이코노미특가 선택 시 -->
+            <div class="tabContents2" id="economySpecial2">
+
+                <div class="f-center-center datess">
+                    <div class="none-mo">
+                        <p>26 (화)</p>
+                        <p>288,400</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>27 (수)</p>
+                        <p>228,400</p>
+                    </div>
+                    <div>
+                        <p>28 (목)</p>
+                        <p>228,400</p>
+                    </div>
+                    <div class="select-date">
+                        <p>29 (금)</p>
+                        <p>228,400</p>
+                    </div>
+                    <div>
+                        <p>30 (토)</p>
+                        <p>288,400</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>31 (일)</p>
+                        <p>288,400</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>04.01 (월)</p>
+                        <p>288,400</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="f-center-center schedules">
+                        <div>
+                            <div>01:50</div>
+                            <p class="small-p">Ceb</p>
+                        </div>
+                        <div>
+                            <p class="small-p">4시간 20분</p>
+                            <img src="img/icon-booking-flight-direction.svg">
+                        </div>
+                        <div>
+                            <div>07:10</div>
+                            <p class="small-p">Icn</p>
+                        </div>
+                    </div>
+                    <div class="f-d-center fare-type">
+                        <div class="second-fare" onclick="openFareDetails2(event,'secondESFare1')">
+                            <p>특가운임</p>
+                            <span>228,400원</span>
+                            <p class="small-p">1석</p>
+                        </div>
+                        <div class="second-fare" onclick="openFareDetails2(event,'secondESFare2')">
+                            <p>할인운임</p>
+                            <span>246,800원</span>
+                            <p class="small-p">1석</p>
+                        </div>
+                        <div class="second-fare" onclick="openFareDetails2(event,'secondESFare3')">
+                            <p>실속운임</p>
+                            <span>266,800원</span>
+                            <p class="small-p">1석</p>
+                        </div>
+                    </div>
+                    <div class="fare-details">
+                        <ul class="flex-wraps second-details" id="secondESFare1">
+                            <li>1,321마일</li>
+                            <li>좌석승급불가</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps second-details" id="secondESFare2">
+                            <li>1,321마일</li>
+                            <li>좌석승급불가</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps second-details" id="secondESFare3">
+                            <li>1,321마일</li>
+                            <li>좌석승급불가</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 이코노미일반 선택 시 -->
+            <div class=" tabContents2" id="economyBasic2" style="display: none;">
+                <div class="f-center-center datess">
+                    <div class="none-mo">
+                        <p>26 (화)</p>
+                        <p>361,800</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>27 (수)</p>
+                        <p>246,800</p>
+                    </div>
+                    <div>
+                        <p>28 (목)</p>
+                        <p>246,800</p>
+                    </div>
+                    <div class="select-date">
+                        <p>29 (금)</p>
+                        <p>246,800</p>
+                    </div>
+                    <div>
+                        <p>30 (토)</p>
+                        <p>361,800</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>31 (일)</p>
+                        <p>361,800</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>04.01 (월)</p>
+                        <p>361,800</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="f-center-center schedules">
+                        <div>
+                            <div>01:50</div>
+                            <p class="small-p">Ceb</p>
+                        </div>
+                        <div>
+                            <p class="small-p">4시간 20분</p>
+                            <img src="img/icon-booking-flight-direction.svg">
+                        </div>
+                        <div>
+                            <div>07:10</div>
+                            <p class="small-p">Icn</p>
+                        </div>
+                    </div>
+                    <div class="f-d-center fare-type">
+                        <div class="second-fare" onclick="openFareDetails2(event,'secondEBFare1')">
+                            <p>실속운임</p>
+                            <span>246,800원</span>
+                            <p class="small-p">1석</p>
+                        </div>
+                        <div class="second-fare" onclick="openFareDetails2(event,'secondEBFare2')">
+                            <p>할인운임</p>
+                            <span>296,800원</span>
+                            <p class="small-p">1석</p>
+                        </div>
+                        <div class="second-fare" onclick="openFareDetails2(event,'secondEBFare3')">
+                            <p>일반운임</p>
+                            <span>481,800원</span>
+                            <p class="small-p">9석</p>
+                        </div>
+                    </div>
+                    <div class="fare-details">
+                        <ul class="flex-wraps second-details" id="secondEBFare1">
+                            <li>1,321마일</li>
+                            <li>좌석승급불가</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps second-details" id="secondEBFare2">
+                            <li>1,887마일</li>
+                            <li>좌석승급불가</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps second-details" id="secondEBFare3">
+                            <li>1,887마일</li>
+                            <li>좌석승급가능</li>
+                            <li>환불위약금<br>200,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 비즈니스 선택시  -->
+            <div class="tabContents2" id="business2" style="display: none;">
+                <div class="f-center-center datess">
+                    <div class="none-mo">
+                        <p>26 (화)</p>
+                        <p>533,400원</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>27 (수)</p>
+                        <p>533,400</p>
+                    </div>
+                    <div>
+                        <p>28 (목)</p>
+                        <p>533,400</p>
+                    </div>
+                    <div class="select-date">
+                        <p>29 (금)</p>
+                        <p>533,400</p>
+                    </div>
+                    <div>
+                        <p>30 (토)</p>
+                        <p>533,400</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>31 (일)</p>
+                        <p>533,400</p>
+                    </div>
+                    <div class="none-mo">
+                        <p>04.01 (월)</p>
+                        <p>533,400</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="f-center-center schedules">
+                        <div>
+                            <div>01:50</div>
+                            <p class="small-p">Ceb</p>
+                        </div>
+                        <div>
+                            <p class="small-p">4시간 20분</p>
+                            <img src="img/icon-booking-flight-direction.svg">
+                        </div>
+                        <div>
+                            <div>07:10</div>
+                            <p class="small-p">Icn</p>
+                        </div>
+                    </div>
+                    <div class="f-d-center fare-type ">
+                        <div class="second-fare" onclick="openFareDetails2(event,'secondBFare1')">
+                            <p>특가운임</p>
+                            <span>533,400원</span>
+                            <p class="small-p">2석</p>
+                        </div>
+                        <div class="second-fare" onclick="openFareDetails2(event,'secondBFare2')">
+                            <p>할인운임</p>
+                            <span>566,800원</span>
+                            <p class="small-p">2석</p>
+                        </div>
+                        <div class="second-fare" onclick="openFareDetails2(event,'secondBFare3')">
+                            <p>일반운임</p>
+                            <span>888,400원</span>
+                            <p class="small-p">6석</p>
+                        </div>
+                    </div>
+                    <div class="fare-details">
+                        <ul class="flex-wraps second-details" id="secondBFare1">
+                            <li>1,887마일</li>
+                            <li>좌석승급가능</li>
+                            <li>환불위약금<br>250,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps second-details" id="secondBFare2">
+                            <li>1,887마일</li>
+                            <li>좌석승급가능</li>
+                            <li>환불위약금<br>250,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                        <ul class="flex-wraps second-details" id="secondBFare3">
+                            <li>2,359마일</li>
+                            <li>좌석승급가능</li>
+                            <li>환불위약금<br>250,000원</li>
+                            <li>재발행수수료<br>100,000원</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </article>
+
+
+    <script>
+        // 첫번째 여정 클래스 타입 선택
+        function openTabContents1(evt, tabMenuName) {
+            var i, x, tabMenu1;
+            x = document.getElementsByClassName("tabContents1");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tabMenu1 = document.getElementsByClassName("tabMenu1");
+            for (i = 0; i < x.length; i++) {
+                tabMenu1[i].className = tabMenu1[i].className.replace("tabmenu-color1", "");
+            }
+            document.getElementById(tabMenuName).style.display = "block";
+            evt.currentTarget.className += " tabmenu-color1";
+        }
+
+        // 두번째 여정 클래스 타입 선택
+        function openTabContents2(evt, tabMenuName) {
+            var j, y, tabMenu2;
+            y = document.getElementsByClassName("tabContents2");
+            for (j = 0; j < y.length; j++) {
+                y[j].style.display = "none";
+            }
+            tabMenu2 = document.getElementsByClassName("tabMenu2");
+            for (j = 0; j < y.length; j++) {
+                tabMenu2[j].className = tabMenu2[j].className.replace("tabmenu-color2", "");
+            }
+            document.getElementById(tabMenuName).style.display = "block";
+            evt.currentTarget.className += " tabmenu-color2";
+        }
+
+    </script>
+
+
+    <article class="payments">
+
+        <div class="f-center-center steps">
+            <div>1</div>
+            <div>2</div>
+            <div class="current-step">3 결제</div>
+        </div>
+
+        <div>
+            <h3>여정 정보</h3>
+            <div class="itinerarys-info">
+                <div>첫 번째 여정</div>
+                <div>
+                    <div class="f-d-center">
+                        <p>서울 / 인천</p>
+                        <span class="itinerarys-arrow"></span>
+                        <p>세부</p>
+                    </div>
+                    <p>2024.03.25(월) 21:10 ~ 2024.03.26(화) 00:45 +1DAY</p>
+                    <p><strong>OZ709</strong> 일반석</p>
+                </div>
+            </div>
+            <div class="itinerarys-info">
+                <div>두 번째 여정</div>
+                <div>
+                    <div class="f-d-center">
+                        <p>세부</p>
+                        <span class="itinerarys-arrow"></span>
+                        <p>서울 / 인천</p>
+                    </div>
+                    <p>2024.03.29(금) 01:50 ~ 2024.03.29(금) 07:10</p>
+                    <p><strong>OZ710</strong> 일반석</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>탑승자 정보</h3>
+        <p class="small-p">*는 필수 입력 사항입니다.</p>
+
+        <div>
+            <div>
+                <div>성인1</div>
+                <div></div><!-- 화살표 -->
+            </div>
+
+            <div>
+                <div>
+                    <label class="requireds">승객 성</label>
+                    <input type="text" placeholder="성(영문)">
+                </div>
+                <div>
+                    <label class="requireds">승객 이름</label>
+                    <input type="text" placeholder="성(영문)">
+                </div>
+            </div>
+
+            <div>
+                <label class="requireds">성별</label>
+                <div class="f-d-center">
+                    <input type="button" value="남성" class="gender-button buttonactive">
+                    <input type="button" value="여성" class="gender-button">
+                </div>
+            </div>
+
+            <div>
+                <label class="requireds">생년월일</label>
+                <div class="f-d-center">
+                    <select id="birth-year">
+                        <option disabled selected>년</option>
+                    </select>
+                    <select id="birth-month">
+                        <option disabled selected>월</option>
+                    </select>
+                    <select id="birth-day">
+                        <option disabled selected>일</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label>회원번호(탑승객)</label>
+                <div class="f-d-center">
+                    <select>
+                        <option>선택안함</option>
+                        <option>남아프리카항공 - Voyager</option>
+                        <option>루프트한자 - Miles & More</option>
+                        <option>브뤼셀항공 - Miles & More</option>
+                        <option>스위스항공 - Miles&More</option>
+                        <option>스칸디나비아항공 - EuroBonus</option>
+                        <option>심천항공 - PhoenixMiles</option>
+                        <option>싱가포르항공 - KrisFlyer</option>
+                        <option>아비앙카항공 - LifeMiles</option>
+                        <option>아시아나항공 - Asiana Club</option>
+                        <option>에게안항공 - Miles+Bonus</option>
+                    </select>
+                    <input type="text" placeholder="예시. 123 456 789">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div>연락처 정보</div>
+            <p class="small-p">예약정보수신 연락처에 작성하신 이메일로 구매 결과와 여정안내서를 전송해드립니다.</p>
+
+            <div>
+                <label>연락처</label>
+                <select>
+                    <option>선택</option>
+                    <option>휴대폰</option>
+                    <option>집</option>
+                    <option>회사</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="requireds">국가번호</label>
+                <input type="text" placeholder="예시. 81">
+            </div>
+
+            <div>
+                <label class="requireds">전화번호</label>
+                <input type="tel" placeholder="예. 01012345678">
+            </div>
+
+            <div>
+                <label class="requireds">이메일</label>
+                <input type="email" placeholder="예. asiana@asiana.com">
+            </div>
+
+            <div class="f-d-center">
+                <input type="checkbox" style="width: auto;">
+                <label class="small-p">[필수] 예약 여정의 정보를 이메일과 SMS로 수신하는 것에 동의합니다. </label>
+            </div>
+
+            <div>비회원 비밀번호 등록</div>
+            <p class="small-p">비밀번호는 홈페이지나 모바일에서 예약 변경 및 취소할 경우 필요합니다.</p>
+            <div>
+                <label class="requireds">비밀번호 (6~8자리 문자 또는 숫자 입력)</label>
+                <input type="password" placeholder="예. OZ709">
+            </div>
+            <div>
+                <label class="requireds">비밀번호 확인 (6~8자리 문자 또는 숫자 입력)</label>
+                <input type="password" placeholder="예. OZ709">
+            </div>
+        </div>
+
+        <button>탑승자 입력 완료 </button>
+
+        <div>
+            <div class="space-betweens">
+                <div>최종 결제 금액</div>
+                <div><span></span> 원</div>
+            </div>
+            <button>결제하기</button>
+        </div>
+
+    </article>
+
+    <script>
+        //남성,여성 버튼 active
+        genderButtons = document.querySelectorAll(".gender-button");
+        for (b = 0; b < genderButtons.length; b++) {
+            genderButtons[b].addEventListener("click", function () {
+                genderButtons[1].style.background = "none";
+                genderButtons[0].style.background = "none";
+                this.style.background = "#eee";
+            });
+        }
+
+        //생년월일
+        const birthYearEl = document.querySelector('#birth-year')
+        // option 목록 생성 여부 확인
+        isYearOptionExisted = false;
+        birthYearEl.addEventListener('focus', function () {
+            // year 목록 생성되지 않았을 때 (최초 클릭 시)
+            if (!isYearOptionExisted) {
+                isYearOptionExisted = true
+                for (var i = 1920; i <= 2022; i++) {
+                    // option element 생성
+                    const YearOption = document.createElement('option')
+                    YearOption.setAttribute('value', i)
+                    YearOption.innerText = i
+                    // birthYearEl의 자식 요소로 추가
+                    this.appendChild(YearOption);
+                }
+            }
+        });
+
+        const birthMonthEl = document.querySelector('#birth-month')
+        // option 목록 생성 여부 확인
+        isMonthOptionExisted = false;
+        birthMonthEl.addEventListener('focus', function () {
+            // month 목록 생성되지 않았을 때 (최초 클릭 시)
+            if (!isMonthOptionExisted) {
+                isMonthOptionExisted = true
+                for (var i = 1; i <= 12; i++) {
+                    // option element 생성
+                    const MonthOption = document.createElement('option')
+                    MonthOption.setAttribute('value', i)
+                    MonthOption.innerText = i
+                    // birthMonthEl의 자식 요소로 추가
+                    this.appendChild(MonthOption);
+                }
+            }
+        });
+
+        const birthDayEl = document.querySelector('#birth-day')
+        // option 목록 생성 여부 확인
+        isDayOptionExisted = false;
+        birthDayEl.addEventListener('focus', function () {
+            // year 목록 생성되지 않았을 때 (최초 클릭 시)
+            if (!isDayOptionExisted) {
+                isDayOptionExisted = true
+                for (var i = 1; i <= 31; i++) {
+                    // option element 생성
+                    const DayOption = document.createElement('option')
+                    DayOption.setAttribute('value', i)
+                    DayOption.innerText = i
+                    // birthDayEl의 자식 요소로 추가
+                    this.appendChild(DayOption);
+                }
+            }
+        });
+    </script>
+
+
+    <div w3-include-footer="footer.html"></div>
+
+    <script>
+        includeHEADER();
+        includeFOOTER();
+    </script>
+
+
+</body>
+
+</html>

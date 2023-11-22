@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>asiana-qna</title>
+  <link rel="stylesheet" href="posting.css">
+  <link rel="stylesheet" href="header-footer.css">
+  <style type="text/css"></style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+</head>
+
+<body>
+
+  <div w3-include-header="header.html"></div>
+
+
+  <article class="qna">
+
+    <h1>고객의 말씀</h1>
+
+    <section>
+
+      <h3>의견 내용 작성</h3>
+
+      <div>
+        <p class="neccessary">유형 선택</p>
+        <div class="f-d-center">
+          <input type="radio" name="rec-type">
+          <label>칭송</label>
+          <input type="radio" name="rec-type">
+          <label>불만</label>
+          <input type="radio" name="rec-type">
+          <label>문의</label>
+          <input type="radio" name="rec-type">
+          <label>제언</label>
+        </div>
+      </div>
+
+      <div>
+        <p class="neccessary">분류 선택</p>
+
+        <select id="typeSelectBox" onchange="categoryChange1(this)">
+          <option selected disabled>선택해주세요</option>
+          <option value="asianaclub">아시아나클럽</option>
+          <option value="booking">항공권 예약</option>
+          <option value="schedule">스케줄 운영</option>
+          <option value="purchase">항공권 구매/환불</option>
+          <option value="pcmobile">홈페이지/모바일 이용</option>
+          <option value="airport">공항</option>
+          <option value="onboard">캐빈(기내)</option>
+          <option value="facilities">기내시설 및 환경</option>
+          <option value="delayed">항공기 지연/결항/회항</option>
+          <option value="others">기타</option>
+        </select>
+
+        <select id="firstTarget">
+          <option selected disabled>선택해주세요</option>
+        </select>
+      </div>
+
+      <div>
+        <p class="neccessary">제목</p>
+        <input type="text" placeholder="제목을 입력하세요.">
+      </div>
+
+      <div>
+        <p class="neccessary">내용</p>
+        <textarea placeholder="내용을 입력하세요." id="writeText" data-length="300"></textarea>
+        <div><span class="textLength">0</span>/300자</div>
+      </div>
+
+      <div>
+        <label for="input-file" style="display: none;">첨부파일</label>
+        <input type="file" id="input-file">
+        <p class="small-p">· 고객정보의 보호를 위해 첨부파일 기능 이용시, 개인정보 내용이 포함된 자료의 첨부는 지양하여 주십시오.(※ 탑승권, 항공권, 신분증 등)<br>
+          · 파일명이 한글, 영문, 숫자를 제외한 다른 나라의 언어일 경우, 등록된 파일에 손상이 발생할 수 있습니다.<br>
+          · JPG, JPEG, DOC, DOCX, PPT, PPTX, TXT, PDF, PNG, XPS, XLS, XLSX, 파일 형태로 첨부하시기 바랍니다.<br>
+          · 파일당 최대 5MB(음성/영상 파일은 최대 20MB)까지 첨부 가능합니다.</p>
+      </div>
+
+      <div>
+        <p class="neccessary">회신 유/무 선택</p>
+        <p class="small-p">회신을 원하지 않으시면 아니오를 선택해주세요.</p>
+        <div class="f-d-center">
+          <input type="radio" name="reply-status">
+          <label>예</label>
+          <input type="radio" name="reply-status">
+          <label>아니오</label>
+        </div>
+        <button class="asiana-button">등록</button>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>문의 완료</h3>
+      <img src="img/icon-posting-qna-complete.png">
+      <h4>문의가 정상적으로 등록되었습니다.<br>
+        이용해주셔서 감사합니다.</h4>
+      <p class="small-p">작성하신 고객님의 소중한 말씀은 담당자 확인 후,<br> 가능한 빠른 시간 내에 답변 드리겠습니다.</p>
+      <div class="f-d-center">
+        <button class="button-default" onClick="location.href='index.html'">홈으로</button>
+        <button class="asiana-button">나의 문의 목록</button>
+      </div>
+    </section>
+
+    <section class="qna-to">
+      <h3>문의 내역</h3>
+      <div>1:1 문의 내역이 <span class="text-red">3</span>건 있습니다.</div>
+
+      <div>
+
+        <details class="to-wait">
+          <summary>
+            <div>
+              <div>답변대기</div>
+              <div>아시아나항공 SNS 페이지가 궁금..</div>
+            </div>
+            <div>
+              <div>2022.03.28</div>
+              <div><img src="img/posting-icon-qna-list.png" alt=""></div>
+            </div>
+          </summary>
+          <div>
+            <div>질문</div>
+            <p>아시아나항공 SNS 페이지가 궁금합니다.
+              공식 SNS 페이지를 알려주세요.</p>
+          </div>
+          <div>
+            <div>⤷답변</div>
+            <p>아직 질문에 답변이 달리지 않았습니다. 영업일 기준 3일 이내로 회신드립니다.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <div>
+              <div>답변완료</div>
+              <div>이벤트 당첨 상품이 아직 도착..</div>
+            </div>
+            <div>
+              <div>2022.03.17</div>
+              <div><img src="img/posting-icon-qna-list.png" alt=""></div>
+            </div>
+          </summary>
+          <div>
+            <div>질문</div>
+            <p>이벤트 당첨 상품이 아직 도착하지 않았습니다.
+              언제쯤 수령할 수 있을까요?</p>
+          </div>
+          <div>
+            <div>⤷답변</div>
+            <p>이벤트 상품은 2022년 3월 12일 일괄 배송되었으며, 문자로 발송드린 송장번호를 통해 배송조회 하실 수 있습니다.
+              감사합니다.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <div>
+              <div>답변완료</div>
+              <div>이벤트 당첨 여부를 어떻게 알 수..</div>
+            </div>
+            <div>
+              <div>2022.03.01</div>
+              <div><img src="img/posting-icon-qna-list.png" alt=""></div>
+            </div>
+          </summary>
+          <div>
+            <div>질문</div>
+            <p>이벤트 당첨 여부를 어떻게 알 수 있나요?</p>
+          </div>
+          <div>
+            <div>⤷답변</div>
+            <p>이벤트에 당첨되신 고객님의 경우 문자 메시지로 별도 연락을 드리고 있습니다.
+              감사합니다.</p>
+          </div>
+        </details>
+
+      </div>
+
+    </section>
+
+  </article>
+
+
+  <script>
+    // select option 바꿔주기
+    let secondType_a = ["아시아나클럽 운영", "아시아나클럽 규정", "마일리지 항공권", "마일리지 사용"];
+    let secondType_b = ["전화예약", "홈페이지/모바일 예약", "제휴항공사", "초과예약", "대기예약"];
+    let secondType_c = ["스케줄 변경", "운항정보", "노선운영"];
+    let secondType_d = ["항공권 구매,환불(전화/지점/여행사)", "항공권 구매,환불(홈페이지/모바일)", "유료좌석", "항공권 규정", "제휴항공사"];
+    let secondType_e = ["콘텐츠", "편의성", "이벤트", "디자인"];
+    let secondType_f = ["탑승수속 서비스", "교통약자 서비스", "라운지 서비스", "게이트 서비스", "비정상상황 서비스", "도착지 공항 서비스", "도착지 수하물(수하물 분실 등)", "수하물 파손 사고 신고", "수하물 규정", "수하물 사전구매"];
+    let secondType_g = ["캐빈승무원", "기내식", "기내식제공서비스", "기내면세품", "로고상품", "음료", "음료 제공 서비스", "비정상상황 서비스", "승무원 안전활동", "휴대수하물", "서비스용품", "기내 엔터테인먼트", "기내지", "SNS"];
+    let secondType_h = ["기내시설", "기내환경", "기내 WIFI"];
+    let secondType_i = ["항공기 지연", "항공기 결항", "항공기 회항"];
+    let secondType_j = ["운항승무원 관련", "기내지", "SNS", "인사/채용", "사회공헌", "견학", "조종사 체험", "고객우대보너스증서", "기타"];
+
+    let target1 = document.getElementById("firstTarget");
+
+    function categoryChange1(e) {
+      if (e.value == "asianaclub") var secondSelect = secondType_a;
+      else if (e.value == "booking") var secondSelect = secondType_b;
+      else if (e.value == "schedule") var secondSelect = secondType_c;
+      else if (e.value == "purchase") var secondSelect = secondType_d;
+      else if (e.value == "pcmobile") var secondSelect = secondType_e;
+      else if (e.value == "airport") var secondSelect = secondType_f;
+      else if (e.value == "onboard") var secondSelect = secondType_g;
+      else if (e.value == "facilities") var secondSelect = secondType_h;
+      else if (e.value == "delayed") var secondSelect = secondType_i;
+      else if (e.value == "others") var secondSelect = secondType_j;
+
+      target1.options.length = 0;
+
+      for (x in secondSelect) {
+        let opt = document.createElement("option");
+        opt.value = secondSelect[x];
+        opt.innerHTML = secondSelect[x];
+        target1.appendChild(opt);
+      }
+    }
+
+    //textarea 글자수 제한,체크
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("writeText").addEventListener("keyup", function (event) {
+        inputLimitLengthChecked(event.target);
+      });
+    });
+
+    //설정된 문자길이를 넘어서지 못하게 체크하는 함수
+    function inputLimitLengthChecked(obj) {
+      if (obj.value.length > obj.dataset.length) {
+        alert("최대 300자까지 입력 가능합니다.");
+        obj.value = obj.value.substr(0, obj.dataset.length);
+      } else {
+        document.getElementsByClassName("textLength")[0].innerText = obj.value.length;
+      }
+    }
+  </script>
+
+
+  <div w3-include-footer="footer.html"></div>
+
+  <script>
+    includeHEADER();
+    includeFOOTER();
+  </script>
+
+
+</body>
+
+</html>

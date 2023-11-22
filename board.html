@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>asiana-board</title>
+  <link rel="stylesheet" href="posting.css">
+  <link rel="stylesheet" href="header-footer.css">
+  <style type="text/css"></style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+</head>
+
+<body>
+
+  <div w3-include-header="header.html"></div>
+
+  <article class="board">
+
+    <h1>게시판</h1>
+
+    <section>
+      <h3>여행지 추천하기</h3>
+      <input type="text" placeholder="제목을 입력하세요.">
+      <textarea placeholder="내용을 입력하세요."></textarea>
+      <div class="f-d-center">
+        <input type="file" id="file">
+        <label for="file"><img src="img/icon-posting-add-file.png"></label>
+        <input type="file" id="file">
+        <label for="file"><img src="img/icon-posting-add-file.png"></label>
+        <input type="file" id="file">
+        <label for="file"><img src="img/icon-posting-add-file.png"></label>
+        <input type="file" id="file">
+        <label for="file"><img src="img/icon-posting-add-file.png"></label>
+      </div>
+      <div class="f-d-center">
+        <button class="button-default">임시저장</button>
+        <button class="asiana-button">등록하기</button>
+      </div>
+    </section>
+
+    <section>
+
+      <h3>캐빈승무원 여행 일기</h3>
+
+      <div>
+        <h4>싱가포르의 이국적인 거리들</h4>
+        <p class="small-p">다국적인 거리, 아랍 스트리트와 하지레인<br> 그리고 리틀 인디아를 소개합니다.</p>
+
+        <div class="space-betweens">
+          <div>2023.09.09</div>
+          <div class="f-d-center">
+            <div>좋아요</div>
+            <div>66</div>
+            <div>조회수</div>
+            <div>4,088</div>
+          </div>
+        </div>
+
+        <img src="img/posting-singapore-pic-1.png">
+        <p>향신료 내음 가득, 인도인들의 거리 리틀 인디아</p>
+        <img src="img/posting-singapore-pic-2.png">
+        <p>이슬람 문화를 엿볼 수 있는, 아랍 스트리트</p>
+        <img src="img/posting-singapore-pic-3.png">
+        <p>싱가포르에서 가장 오래된 이슬람 사원, 술탄 모스크</p>
+        <img src="img/posting-singapore-pic-4.png">
+        <p>아랍 스트리트의 숨은 명소, 하지레인</p>
+
+        <div class="f-center-center">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div>
+        <div>댓글 2개</div>
+
+        <div class="space-betweens">
+          <div class="f-d-center">
+            <img src="img/icon-posting-profile.png">
+            <div>
+              <div>airlover</div>
+              <div>이국적인 거리들이 정말 인상깊네요. 저도 가보고 싶어요!</div>
+              <div>1시간 전</div>
+            </div>
+          </div>
+          <img src="img/icon-posting-comment-option.png">
+        </div>
+
+        <div class="space-betweens">
+          <div class="f-d-center">
+            <img src="img/icon-posting-profile.png">
+            <div>
+              <div>travelmania</div>
+              <div>사진을 보니 또다시 가고 싶네요.</div>
+              <div>1시간 전</div>
+            </div>
+          </div>
+          <img src="img/icon-posting-comment-option.png">
+        </div>
+
+        <textarea placeholder="댓글을 입력하세요"></textarea>
+        <div class="space-betweens">
+          <div class="f-d-center">
+            <input type="checkbox">
+            <div>비밀글</div>
+          </div>
+          <button class="button-default">등록하기</button>
+        </div>
+
+      </div>
+
+      <div>
+        <div>인기 게시글</div>
+
+        <div class="space-betweens">
+          <div>뉴욕의 거리를 걷다 보면 유명한 퍼블릭 아트(Public Art)를 심심치 않게 발견할 수 있습니다. 이는 여행에 또 하나의 즐거움을 선사해 줄 것입니다. 또한 요즘 이곳에서는 현지인들
+            사이에서도 떠오르고 있는 핫플레이스가 있습니다. 바로 뉴욕의 에펠탑이라 불리는 베슬(Vessel)입니다. 지금부터 애비뉴와 스트리트 사이사이에 숨어있는 예술작품들을 찾아 떠나보겠습니다.
+          </div>
+          <img src="img/posting-others-pic-1.png">
+        </div>
+
+        <div class="space-betweens">
+          <div>복잡한 와이키키 시내를 벗어나 조금 더 한적하고 여유로운 곳을 찾으신다면 이곳을 추천해 드리려 합니다. 노스쇼어가 사랑받는 이유는 행운의 바다거북이와 다양한 열대어들을 보며 스노클링도 할
+            수 있고 매년 서핑 대회가 열릴 만큼 서핑 매니아들이 많이 찾아오는 곳이기 때문입니다. 오늘 하루 저와 함께 노스쇼어로 떠나볼까요?</div>
+          <img src="img/posting-others-pic-2.png">
+        </div>
+
+        <div class="space-betweens">
+          <div>요즘 로마 젊은이들의 마음을 사로잡은 곳이 있습니다. 바로 트라스테베레(TRASTEVERE)라는 곳입니다. 트라베스테베레(TRASTEVERE)는 ‘테베레(TEVERE)강 건너’라는
+            뜻입니다. 이곳은 주택가에 작은 레스토랑들이 들어오기 시작하면서 로마 젊은이들의 아지트로 변모하였습니다. 빈티지한 거리의 풍경과 특유의 경쾌한 에너지가 매혹적인 곳,
+            트라스테베레(TRASTEVERE)의 맛집으로 여러분을 초대합니다.</div>
+          <img src="img/posting-others-pic-3.jpeg">
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>이벤트 목록</h3>
+
+      <div class="space-betweens-top-p">
+        <div class="image-scales">
+          <img src="img/posting-event-pic-1.png">
+        </div>
+        <div>
+          <h4>날카로운 찬바람이 불어오는 계절 GO TO JAPAN</h4>
+          <p>낮에는 온천으로 몸과 마음의 힐링, 밤에는 일루미네이션으로 즐기는 빛의 향연
+          </p>
+          <p class="small-p">2023-11-15 ~
+            2023-12-16</p>
+        </div>
+      </div>
+
+      <div class="space-betweens-top-p">
+        <div class="image-scales">
+          <img src="img/posting-event-pic-2.png">
+        </div>
+        <div>
+          <h4>도쿄를 더 빠르게, 다운타운을 더 가깝게</h4>
+          <p>
+            김포-하네다 취항 20주년!<br>오늘도 서울과 도쿄를 빠르고 편리하게 연결하는 매일 3회 운항 스케줄
+          </p>
+          <p class="small-p">2023-11-15 ~
+            2024-03-31</p>
+        </div>
+      </div>
+
+      <div class="space-betweens-top-p">
+        <div class="image-scales">
+          <img src="img/posting-event-pic-3.png">
+        </div>
+        <div>
+          <h4>아시아나X삼성카드 6,000 마일리지 이벤트</h4>
+          <p>
+            아시나요? 일상에서 30만원 쓰면, 아시아나 6,000 마일리지 적립
+          </p>
+          <p class="small-p">2023-11-15 ~
+            2023-12-31</p>
+        </div>
+      </div>
+
+      <div class="space-betweens-top-p">
+        <div class="image-scales">
+          <img src="img/posting-event-pic-4.png">
+        </div>
+        <div>
+          <h4>어디로 갈까? 생각만 해도 즐거운 시작 오즈드림쿠폰</h4>
+          <p>
+            어디로 갈까? 생각만 해도 즐거운 시작 오즈드림쿠폰<br>할인율 5~10%
+          </p>
+          <p class="small-p">2023-11-14 ~2023-11-24</p>
+        </div>
+      </div>
+
+      <div class="space-betweens-top-p">
+        <div class="image-scales">
+          <img src="img/posting-event-pic-5.png">
+        </div>
+        <div>
+          <h4>6번째 생일을 맞이한 똑똑한 챗봇 ‘아론＇에게 문의하세요!</h4>
+          <p>
+            해가 거듭날수록 더욱 똑똑해지기 위해 노력하는 '아론'이와 24시간 언제든지 대화해 보세요!
+          </p>
+          <p class="small-p">
+            2023-11-13 ~
+            2023-11-24
+          </p>
+        </div>
+      </div>
+
+      <button class="f-center-center button-default">더 보기</button>
+    </section>
+
+  </article>
+
+  <div w3-include-footer="footer.html"></div>
+
+  <script>
+    includeHEADER();
+    includeFOOTER();
+  </script>
+
+
+</body>
+
+
+</html>

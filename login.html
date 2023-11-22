@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>asiana-login</title>
+    <link rel="stylesheet" href="membership.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+</head>
+
+
+<body>
+
+    <div w3-include-header="header.html"></div>
+
+
+    <article class="login">
+
+        <h1>로그인</h1>
+
+        <section>
+            <div class="f-center-center">
+                <div class="tabMenu tabmenu-color" onclick="openTabContents(event,'loginMembership')">로그인</div>
+                <div class="tabMenu" onclick="openTabContents(event,'loginGuest')">비로그인 예약조회</div>
+            </div>
+
+            <div class="login-membership tabContents" id="loginMembership">
+                <div class="f-d-center">
+                    <div class="f-d-center">
+                        <input type="radio" checked id="idLogin" name="login-type" onclick='getLoginType(event)'
+                            value="id-login">
+                        <label>아이디 로그인</label>
+                    </div>
+                    <div class="f-d-center">
+                        <input type="radio" id="numberLogin" name="login-type" onclick='getLoginType(event)'
+                            value="number-login">
+                        <label>회원번호 로그인</label>
+                    </div>
+                </div>
+
+                <div id="idLoginContent">
+                    <input type="text" placeholder="아이디를 입력해주세요.">
+                    <input type="password" placeholder="비밀번호를 입력해주세요.">
+                    <div class="f-d-center">
+                        <input type="checkbox">
+                        <label>아이디 저장</label>
+                    </div>
+                </div>
+
+                <div id="numberLoginContent" style="display: none;">
+                    <input type="text" placeholder="회원번호를 입력해주세요.">
+                    <input type="password" placeholder="비밀번호를 입력해주세요.">
+                    <div class="f-d-center">
+                        <input type="checkbox">
+                        <label>회원번호 저장</label>
+                    </div>
+                </div>
+
+                <div class="login-common">
+                    <button class="asiana-button">로그인</button>
+                    <div class="space-betweens">
+                        <div class="f-d-center">
+                            <div onclick="openPreparing()">아이디 찾기</div>
+                            <div onclick="openPreparing()">회원번호 찾기</div>
+                            <div onclick="openPreparing()">비밀번호 찾기</div>
+                        </div>
+                        <button onClick="location.href='joinus.html'">회원가입</button>
+                    </div>
+                    <div>SNS 간편로그인</div>
+                    <div class="space-betweens">
+                        <button class="f-center-center" onclick="openPreparing()"><img
+                                src="img/icon-membership-icon-googlebtn.png">구글 <span
+                                class="none-mo">간편로그인</span></button>
+                        <button class="f-center-center" onclick="openPreparing()"><img
+                                src="img/icon-membership-kakaobtn.png">카카오<br><span class="none-mo">간편로그인</span></button>
+                        <button class="f-center-center" onclick="openPreparing()"><img
+                                src="img/icon-membership-naverbtn.svg">네이버<br><span class="none-mo">간편로그인</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-guest tabContents" id="loginGuest" style="display: none;">
+                <input type="text" placeholder="예약번호 입력 ex) 5XT9UU / 12345678">
+                <div class="space-betweens">
+                    <input type="text" placeholder="탑승일 입력">
+                    <span class="round-icon"></span>
+                </div>
+                <div class="space-betweens">
+                    <input type="text" placeholder="출발지 입력">
+                    <span class="round-icon"></span>
+                </div>
+                <div class="space-betweens">
+                    <input type="text" placeholder="도착지 입력">
+                    <span class="round-icon"></span>
+                </div>
+                <input type="text" placeholder="예약 시 입력한 영문/국문 성 (Last Name, 姓) 입력">
+                <input type="text" placeholder="예약 시 입력한 영문/국문 이름 (First Name, 名) 입력">
+                <button class="asiana-button" onclick="openPreparing()">예약조회</button>
+            </div>
+
+        </section>
+
+    </article>
+
+
+    <script>
+        function openTabContents(evt, tabMenuName) {
+            var i, x, tabMenu;
+            x = document.getElementsByClassName("tabContents");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tabMenu = document.getElementsByClassName("tabMenu");
+            for (i = 0; i < x.length; i++) {
+                tabMenu[i].className = tabMenu[i].className.replace("tabmenu-color", "");
+            }
+            document.getElementById(tabMenuName).style.display = "block";
+            evt.currentTarget.className += " tabmenu-color";
+        }
+
+        // 라디오 버튼 체크 시 컨텐츠 변경
+        let idLoginContent = document.querySelector("#idLoginContent");
+        let numberLoginContent = document.querySelector("#numberLoginContent");
+
+        function getLoginType(event) {
+            if (event.target.value == "id-login") {
+                idLoginContent.style.display = "block";
+                numberLoginContent.style.display = "none";
+            }
+            if (event.target.value == "number-login") {
+                idLoginContent.style.display = "none";
+                numberLoginContent.style.display = "block";
+            }
+        }
+    </script>
+
+
+    <div w3-include-footer="footer.html"></div>
+
+    <script>
+        includeHEADER();
+        includeFOOTER();
+    </script>
+
+
+</body>
+
+</html>

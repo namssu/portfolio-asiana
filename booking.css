@@ -1,0 +1,702 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  word-break: keep-all;
+  outline: 0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: black;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 15px;
+}
+
+a:link {
+  color: #666;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: red;
+}
+
+button {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: none;
+  background: white;
+  /* cursor: pointer; */
+  transition: 0.3s;
+  font-weight: bold;
+  z-index: 1;
+}
+
+ul li {
+  list-style: none;
+}
+
+/*design*/
+article {
+  padding: 80px 5%;
+}
+
+label {
+  margin-right: 10px;
+}
+
+select {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  padding: 8px 0;
+  margin-top: 10px; 
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  margin-top: 5px;
+}
+
+input[type=button] {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.buttonactive {
+  background: #eee;
+}
+
+.none-mo {
+  display: none;
+}
+
+.space-betweens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f-d-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-wraps {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.f-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 도시 영문  */
+.uppcity {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-right: 8px;
+}
+/* 여정 스케줄 화살표 */
+.flight-course {
+  width: 100px;
+  height: 100%;
+  background: url('img/icon-booking-flight-course-white.png') no-repeat center/contain;
+  margin: 0 20px;
+}
+
+/* booking step 표시 */
+.steps {
+  margin-bottom: 60px;
+}
+
+.steps div {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin: 0 15px;
+  line-height: 45px;
+}
+
+.steps :not(:last-child)::after {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #ddd;
+}
+
+.steps .current-step {
+  width: auto;
+  padding: 0 30px;
+  border-radius: 30px;
+  line-height: 45px;
+  background: #da291c;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* 여정 스케줄 */
+.schedules {
+  text-align: center;
+  border: none;
+  padding: 30px 0;
+  border-bottom: none;
+  border-radius: 5px;
+}
+
+.schedules>div {
+  width: 100%;
+}
+
+.schedules> :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.schedules> :not(:first-child) {
+  margin-left: 5px;
+}
+
+.schedules :not(:nth-child(2)) :first-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.schedules :not(:nth-child(2)) :last-child {
+  text-transform: uppercase;
+}
+
+.schedules :nth-child(2) img {
+  width: 80%;
+}
+
+
+/* 여정 소제목, 아이콘 */
+.itinerarys {
+  margin: 60px 0 20px;
+}
+
+.itinerarys img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.itinerarys div {
+  font-weight: bold;
+  color: #d60815;
+}
+
+.itinerarys-arrow {
+  width: 20px;
+  height: 20px;
+  background: url('img/icon-booking-flight-direction-small.svg') 50% 50%/16px 16px no-repeat;
+  background-size: cover;
+  margin: 0 15px;
+  filter: grayscale(100);
+}
+
+.small-p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.select-date {
+  color: #d60815;
+  font-weight: 600;
+}
+/* 여정정보 */
+.itinerarys-info {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin: 15px 0;
+  padding: 20px 15px;
+}
+
+.itinerarys-info> :first-child {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.itinerarys-info> :nth-child(2)> :first-child {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* 금액 */
+.fare-type> div {
+  width: calc(100%/3);
+  text-align: center;
+  padding: 15px;
+  border-radius: 0px;
+  border: 1px solid #ddd;
+}
+
+.fare-type> div .fareactive {
+  background: #c50251;
+}
+
+.fare-type> :not(:first-child) {
+  border-left: none;
+}
+
+.fare-type div span {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* 좌석(클래스) 타입 */
+.class-type span {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  margin: 30px 8px 15px;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.class-type .tabmenu-color1,
+.class-type .tabmenu-color2 {
+  border-color: #d60815;
+  color: #d60815;
+}
+
+/* 필수항목 */
+.requireds {
+  position: relative;
+}
+
+.requireds::after {
+  position: absolute;
+  right: -15px;
+  content: "*";
+  color: #d60815;
+  font-size: 1.5rem;
+}
+
+/* mobile start */
+
+.cebu-cost {
+  position: relative;
+  background: url('img/booking-cebu-bg.jpg') no-repeat left/cover;
+  color: #fff;
+  height: 300px;
+  padding: 0 5%;
+  margin-bottom: 0;
+}
+
+.cebu-cost> :first-child {
+  height: 55%;
+  font-size: 1.2rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.cebu-cost> :first-child>div {
+  width: 100px;
+}
+
+.cebu-cost> :first-child div .uppcity {
+  margin-right: 0;
+}
+
+.cebu-cost> :last-child {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 45%;
+}
+
+.cebu-cost> :last-child>div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 10px;
+  display: flex;
+
+}
+
+.cebu-cost :last-child div p {
+  position: absolute;
+  top: 6px;
+  font-size: 0.7rem;
+}
+
+.cebu-cost> :last-child> :first-child p,
+.cebu-cost> :last-child> :nth-child(2) p {
+  top: 25%;
+}
+
+.cebu-cost> :last-child> :nth-child(3) p {
+  top: 10px;
+}
+
+.cebu-cost> :last-child> :nth-child(5) p {
+  top: 28%;
+}
+
+.cebu-cost :last-child div span {
+  position: absolute;
+  padding: 0 5px;
+  height: 80%;
+  bottom: 0;
+  font-size: 0.8rem;
+  margin: auto 0;
+  display: block;
+  background: rgba(230, 226, 223, 0.3);
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+}
+
+.cebu-cost :last-child :nth-child(5) span {
+  background: #c20915;
+  color: #fff;
+}
+
+.cebu-cost> :last-child> :first-child span,
+.cebu-cost> :last-child> :nth-child(2) span {
+  height: 60%;
+}
+
+.cebu-cost> :last-child> :nth-child(3) span {
+  height: 77%;
+}
+
+.cebu-cost> :last-child> :nth-child(5)>span {
+  height: 57%;
+}
+
+
+
+.datess {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  background: #fff;
+}
+
+.datess> div {
+  width: 100%;
+  text-align: center;
+}
+
+
+.secondStep {
+  padding-top: 100px;
+}
+
+.secondStep> :nth-child(2)> :first-child> :last-child, .secondStep> :nth-child(3)> :first-child> :last-child {
+  font-size: 1.2rem;
+}
+
+
+.fare-details{
+  margin-bottom: 50px;
+  padding: 10px 20px;
+  border: 1px solid #c50251;
+  display: none;
+}
+
+.fare-details ul li {
+  position: relative;
+  width: 50%;
+  font-size: 0.9rem;
+  padding: 5px 0 5px 25px;
+}
+
+.fare-details ul li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 15px;
+  height: 15px;
+}
+
+.fare-details ul :first-child::before {
+  background: url('img/icon-booking-mileage.png') no-repeat center/cover;
+  top: 10px;
+}
+
+.fare-details ul :nth-child(2)::before {
+  background: url('img/icon-booking-seat.png') no-repeat center/cover;
+  top: 10px;
+}
+
+.fare-details ul :nth-child(3)::before {
+  background: url('img/icon-booking-penalty.png') no-repeat center/cover;
+  top: 10px;
+}
+
+.fare-details ul :last-child::before {
+  background: url('img/icon-booking-reissue.png') no-repeat center/cover;
+  top: 10px;
+}
+
+
+
+.payments> :nth-child(3) {
+  margin-top: 50px;
+}
+
+.payments> :nth-child(5),
+.payments> :nth-child(6) {
+  border-radius: 10px;
+  margin: 20px 0 40px;
+  border: 1px solid #ddd;
+  border-top: none;
+  padding-bottom: 20px;
+}
+
+.payments> :nth-child(5)> :first-child,
+.payments> :nth-child(6)> :first-child {
+  background: #333;
+  color: #fff;
+  padding: 15px 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.payments> :nth-child(5)> :nth-child(2) {
+  padding-top: 20px;
+}
+
+.payments> :nth-child(5)>div,
+.payments> :nth-child(6)>div,
+.payments> :nth-child(6) p {
+  padding: 15px 15px;
+}
+
+.payments> :nth-child(5)> :nth-child(2)> :first-child {
+  margin-bottom: 12px;
+}
+
+.payments> :nth-child(5)> :nth-child(3) div :first-child {
+  margin-right: 8px;
+}
+
+.payments> :nth-child(5)> :nth-child(4) div select {
+  width: 100%;
+}
+
+.payments> :nth-child(5)> :nth-child(4) div :not(:last-child) {
+  margin-right: 8px;
+}
+
+.payments> :nth-child(5)> :last-child> :last-child {
+  flex-direction: column;
+}
+
+.payments> :nth-child(5)> :last-child select {
+  margin-right: 8px;
+}
+.payments> :nth-child(5)> :last-child input {
+  padding: 12px;
+}
+
+
+.payments> :nth-child(6) :nth-child(7) {
+  align-items: start;
+}
+
+.payments> :nth-child(6) :nth-child(8) {
+  font-weight: bold;
+  padding-bottom: 0;
+}
+
+.payments>button {
+  border: 1px solid #d60815;
+  border-radius: 10px;
+  color: #d60815;
+  font-size: 0.9rem;
+  margin: 50px auto;
+  display: block;
+}
+
+.payments> :last-child {
+  margin-top: 50px;
+  font-weight: bold;
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+}
+
+.payments :last-child button {
+  width: 100%;
+  border-radius: 10px;
+  background: #d60815;
+  color: #fff;
+  margin-top: 50px;
+}
+
+/* laptop start */
+@media screen and (min-width: 1366px) {
+
+  body {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  h2 {
+    margin-bottom: 100px;
+  }
+
+  article {
+    padding: 130px 10%;
+  }
+
+  .secondStep, .payments {
+    width: 1000px;
+    padding: 130px 0;
+    margin: 0 auto;
+  }
+
+  /*design start*/
+  .none-pc {
+    display: none;
+  }
+
+  .none-mo {
+    display: block;
+  }
+
+  .f-d-center-p {
+    display: flex;
+    align-items: center;
+  }
+
+  .f-center-center-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 좌석(클래스) 타입 */
+  .class-type span {
+    margin: 60px 12px 35px;
+    padding: 12px;
+    font-size:0.9rem;
+  }
+
+  .steps {
+    margin-bottom: 80px;
+  }
+
+  .fare-type {
+    border-radius: 0px;
+    border: 1px solid #d60815;
+  }
+
+  .fare-type> div {
+    padding: 25px 20px;
+    border: none;
+  }
+
+  .fare-type> :not(:last-child){
+    border-right: 1px solid #ddd;
+  }
+  
+  /*design end*/
+
+  .cebu-cost {
+    height: 500px;
+    padding: 0 10%;
+  }
+
+  .cebu-cost> :first-child {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .cebu-cost> :first-child>div {
+    width: 150px;
+  }
+
+  .cebu-cost :last-child div p {
+    font-size: 1rem;
+  }
+
+  .cebu-cost :last-child div span {
+    font-size: 1.2rem;
+  }
+
+  .cebu-cost> :last-child {
+    width: 80%;
+  }
+
+
+  .datess {
+    padding: 30px 40px;
+  }
+
+
+}
+
+/* end */

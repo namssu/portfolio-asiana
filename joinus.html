@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>asiana-joinus</title>
+    <link rel="stylesheet" href="membership.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+</head>
+
+
+<body>
+
+    <div w3-include-header="header.html"></div>
+
+    <article class="joinus">
+        <div class="joinus-title">
+            <h1>회원가입</h1>
+            <p>회원으로 가입하시면, 예약, 발권, 탑승, 마일리지 조회 등 다양한 서비스와 함께 정기 이벤트 뉴스와 할인항공권 소식을 이메일로 받아보실 수도 있습니다.</p>
+        </div>
+
+        <div class="join-steps f-center-center">
+            <div class="f-d-center join-current-step">
+                <div>
+                    <img src="img/icon-membership-joinsteps-agree.svg">
+                </div>
+                <div>약관 동의</div>
+            </div>
+            <span></span>
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-certify.svg">
+                </div>
+                <div>본인인증</div>
+            </div>
+            <span></span>
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-forms.svg">
+                </div>
+                <div>회원정보 입력</div>
+            </div>
+            <span></span>
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-complete.svg">
+                </div>
+                <div>완료</div>
+            </div>
+        </div>
+
+        <section>
+            <div>
+                <h3>약관 동의</h3>
+                <p>약관 및 개인정보 수집 이용에 동의해 주세요.</p>
+            </div>
+            <div>
+                <div class="space-betweens">
+                    <div class="f-d-center">
+                        <input type="checkbox" name="agree-termsall" onclick="selectAll(this)">
+                        <p>아시아나클럽 일반규정, 약관 및 본인의 개인정보 수집·이용, 국외 이전, 제 3자 제공에 모두 동의합니다.</p>
+                    </div>
+                    <span></span>
+                </div>
+                <div class="space-betweens">
+                    <div class="f-d-center">
+                        <input type="checkbox" name="agree-terms" onclick="checkSelectAll(this)">
+                        <p>[필수] 아시아나클럽 일반 규정 및 홈페이지 이용 약관</p>
+                    </div>
+                    <span class="view_more">보기</span>
+                </div>
+                <div class="space-betweens">
+                    <div class="f-d-center">
+                        <input type="checkbox" name="agree-terms" onclick="checkSelectAll(this)">
+                        <p>[필수] 개인정보 수집 및 이용안내</p>
+                    </div>
+                    <span class="view_more">보기</span>
+                </div>
+                <div class="space-betweens">
+                    <div class="f-d-center">
+                        <input type="checkbox" name="agree-terms" onclick="checkSelectAll(this)">
+                        <p>[필수] 개인정보 국외 이전 동의</p>
+                    </div>
+                    <span class="view_more">보기</span>
+                </div>
+                <div class="space-betweens">
+                    <div class="f-d-center">
+                        <input type="checkbox" name="agree-terms" onclick="checkSelectAll(this)">
+                        <p>[선택] 마케팅 광고 활용 동의</p>
+                    </div>
+                    <span class="view_more">보기</span>
+                </div>
+                <div class="space-betweens">
+                    <div class="f-d-center">
+                        <input type="checkbox" name="agree-terms" onclick="checkSelectAll(this)">
+                        <p>[선택] 개인정보 제 3자 제공 동의</p>
+                    </div>
+                    <span class="view_more">보기</span>
+                </div>
+            </div>
+            <div class="f-d-center">
+                <button class="button-default">취소</button>
+                <button class="asiana-button">확인</button>
+            </div>
+        </section>
+
+        <div class="join-steps f-center-center">
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-agree.svg">
+                </div>
+                <div>약관 동의</div>
+            </div>
+            <span></span>
+            <div class="f-d-center join-current-step">
+                <div>
+                    <img src="img/icon-membership-joinsteps-certify.svg">
+                </div>
+                <div>본인인증</div>
+            </div>
+            <span></span>
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-forms.svg">
+                </div>
+                <div>회원정보 입력</div>
+            </div>
+            <span></span>
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-complete.svg">
+                </div>
+                <div>완료</div>
+            </div>
+        </div>
+
+        <section>
+            <div>
+                <h3>본인 인증</h3>
+                <p>회원님의 소중한 개인 정보 보호를 위하여<br> 본인 확인이 필요합니다.<br><span>(본인 인증은 NICE 신용평가정보를 통해 진행됩니다.)</span></p>
+            </div>
+            <div>
+                <div class="f-center-center">
+                    <div></div>
+                    <div>
+                        <div>휴대전화 인증</div>
+                        <p>본인 명의의 휴대전화를 통한 인증</p>
+                        <button class="asiana-button" onclick="openPreparing()">인증하기</button>
+                    </div>
+                </div>
+                <div class="f-center-center">
+                    <div></div>
+                    <div>
+                        <div>아이핀 인증</div>
+                        <p>본인 인증기관을 통한 아이핀 인증</p>
+                        <button class="asiana-button" onclick="openPreparing()">인증하기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="join-steps f-center-center">
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-agree.svg">
+                </div>
+                <div>약관 동의</div>
+            </div>
+            <span></span>
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-certify.svg">
+                </div>
+                <div>본인인증</div>
+            </div>
+            <span></span>
+            <div class="f-d-center join-current-step">
+                <div>
+                    <img src="img/icon-membership-joinsteps-forms.svg">
+                </div>
+                <div>회원정보 입력</div>
+            </div>
+            <span></span>
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-complete.svg">
+                </div>
+                <div>완료</div>
+            </div>
+        </div>
+
+        <section>
+            <h3>회원정보 입력</h3>
+            <p><span>*</span>는 필수항목입니다.</p>
+
+            <div>
+                <label class="neccessary">한글명</label>
+                <div>
+                    <input type="text" placeholder="한글 성 입력 (예: 홍)">
+                    <input type="text" placeholder="한글 이름 입력 (예: 길동)">
+                </div>
+            </div>
+
+            <div>
+                <label class="neccessary">영문명</label>
+                <div>
+                    <input type="text" placeholder="영문 성 입력 (예:HONG)">
+                    <input type="text" placeholder="영문 이름 입력 (예: GILDONG)">
+                </div>
+            </div>
+
+            <div>
+                <label class="requireds">성별</label>
+                <div class="f-d-center">
+                    <input type="button" value="남성" class="gender-button buttonactive">
+                    <input type="button" value="여성" class="gender-button">
+                </div>
+            </div>
+
+            <div>
+                <label>생년월일</label>
+                <div class="f-d-center">
+                    <div class="f-d-center">
+                        <select id="birth-year">
+                            <option disabled selected>선택</option>
+                        </select>
+                        <p>년</p>
+                    </div>
+                    <div class="f-d-center">
+                        <select id="birth-month">
+                            <option disabled selected>선택</option>
+                        </select>
+                        <p>월</p>
+                    </div>
+                    <div class="f-d-center">
+                        <select id="birth-day">
+                            <option disabled selected>선택</option>
+                        </select>
+                        <p>일</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label class="neccessary">아이디</label>
+                <div class="space-betweens">
+                    <input type="text" placeholder="6~15자리 영문+숫자">
+                    <button class="button-default" onclick="openPreparing()">중복확인</button>
+                </div>
+                <p>* 6~15자리 영문(대소문자 구별), 숫자 조합 입력 가능<br>(단, 한글, 공백, 특수문자 입력 불가)</p>
+            </div>
+
+            <div>
+                <label class="neccessary">비밀번호</label>
+                <input type="password" placeholder="영문+숫자+특수문자 8~20자리">
+            </div>
+
+            <div>
+                <label class="neccessary">비밀번호 확인</label>
+                <input type="password" placeholder="영문+숫자+특수문자 8~20자리">
+            </div>
+
+            <div>
+                <label class="neccessary">휴대전화</label>
+                <div class="f-d-center">
+                    <input type="tel" placeholder="숫자만 입력해주세요">
+                    <button class="button-default" onclick="openPreparing()">인증번호 받기</button>
+                </div>
+            </div>
+
+            <div>
+                <label class="neccessary">이메일</label>
+                <div class="f-d-center">
+                    <input type="text" placeholder="이메일 입력">
+                    <span>@</span>
+                    <select>
+                        <option>선택</option>
+                        <option>naver.com</option>
+                        <option>google.com</option>
+                        <option>hanmail.net</option>
+                        <option>nate.com</option>
+                    </select>
+                    <input type="text" placeholder="직접 입력" class="none-mo">
+                </div>
+            </div>
+
+            <div>
+                <label>유선전화</label>
+                <div class="f-d-center">
+                    <select>
+                        <option>선택</option>
+                        <option>010</option>
+                        <option>02</option>
+                        <option>031</option>
+                    </select>
+                    <span>-</span>
+                    <input type="text" placeholder="중간번호">
+                    <span>-</span>
+                    <input type="text" placeholder="끝번호">
+                </div>
+            </div>
+
+            <div>
+                <label>주소</label>
+                <div>
+                    <div class="f-d-center">
+                        <input type="text" placeholder="우편번호" id="zip-code">
+                        <div class="f-center-center" onclick="execDaumPostcode()">
+                            <p>우편번호 검색</p>
+                            <img src="img/icon-membership-searchzipcode.png">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="text" placeholder="기본 주소" id="address-1">
+                            <input type="text" placeholder="상세 주소" id="address-2">
+                        </div>
+                        <p>· 제공해주신 주소는 이벤트 또는 우수회원 승급 서비스 제공을 위해 이용됩니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label>뉴스레터 및 상품정보, 이벤트 등 수신</label>
+                <div>
+                    <div class="f-d-center">
+                        <div>
+                            <input type="checkbox" name="marketing-type">
+                            <label>이메일</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="marketing-type">
+                            <label>SMS</label>
+                        </div>
+                    </div>
+                    <p>· 수신에 동의하시면 아시아나항공의 뉴스레터 및 상품정보, 이벤트 등의 안내를 받아보실 수 있습니다.</p>
+                    <p>· 회원정보, 예약 및 항공기 운항정보, 서비스 주요정책 관련내용은 수신동의 여부와 관계 없이 발송됩니다.</p>
+                </div>
+            </div>
+
+            <div class="f-d-center">
+                <button class="button-default">취소</button>
+                <button class="asiana-button">확인</button>
+            </div>
+
+        </section>
+
+        <div class="join-steps f-center-center">
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-agree.svg">
+                </div>
+                <div>약관 동의</div>
+            </div>
+            <span></span>
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-certify.svg">
+                </div>
+                <div>본인인증</div>
+            </div>
+            <span></span>
+            <div class="f-d-center">
+                <div>
+                    <img src="img/icon-membership-joinsteps-forms.svg">
+                </div>
+                <div>회원정보 입력</div>
+            </div>
+            <span></span>
+            <div class="f-d-center join-current-step">
+                <div>
+                    <img src="img/icon-membership-joinsteps-complete.svg">
+                </div>
+                <div>완료</div>
+            </div>
+        </div>
+
+        <section>
+            <h3>가입 완료</h3>
+            <p>아시아나항공 회원에게 드리는<br> 다양한 혜택을 누려보세요.</p>
+            <div>
+                <div class="space-betweens">
+                    <div>회원번호</div>
+                    <div>657 547 323</div>
+                </div>
+                <div class="space-betweens">
+                    <div>회원등급</div>
+                    <div>실버(S)</div>
+                </div>
+                <div class="space-betweens">
+                    <div>아이디</div>
+                    <div>namsugyeong01</div>
+                </div>
+            </div>
+            <div class="f-d-center">
+                <button class="button-default" onClick="location.href='index.html'">아시아나항공 메인</button>
+                <button class="asiana-button" onClick="location.href='login.html'">로그인</button>
+            </div>
+        </section>
+
+    </article>
+
+    <!-- 우편번호 검색 -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        //체크박스 전체선택,전체해제
+        function selectAll(selectAll) {
+            const checkboxes
+                = document.getElementsByName('agree-terms');
+
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked
+            })
+        }
+
+        //전체 체크박스 항목 갯수와 선택된 체크박스 항목 갯수 비교
+        function checkSelectAll() {
+            // 전체 체크박스
+            const checkboxes
+                = document.querySelectorAll('input[name="agree-terms"]');
+            // 선택된 체크박스
+            const checked
+                = document.querySelectorAll('input[name="agree-terms"]:checked');
+            // select all 체크박스
+            const selectAll
+                = document.querySelector('input[name="agree-termsall"]');
+
+            if (checkboxes.length === checked.length) {
+                selectAll.checked = true;
+            } else {
+                selectAll.checked = false;
+            }
+        }
+
+        //남성,여성 버튼 active
+        genderButtons = document.querySelectorAll(".gender-button");
+        for (b = 0; b < genderButtons.length; b++) {
+            genderButtons[b].addEventListener("click", function () {
+                genderButtons[1].style.background = "none";
+                genderButtons[0].style.background = "none";
+                this.style.background = "#eee";
+            });
+        }
+
+        //생년월일
+        const birthYearEl = document.querySelector('#birth-year')
+        // option 목록 생성 여부 확인
+        isYearOptionExisted = false;
+        birthYearEl.addEventListener('focus', function () {
+            // year 목록 생성되지 않았을 때 (최초 클릭 시)
+            if (!isYearOptionExisted) {
+                isYearOptionExisted = true
+                for (var i = 1920; i <= 2022; i++) {
+                    // option element 생성
+                    const YearOption = document.createElement('option')
+                    YearOption.setAttribute('value', i)
+                    YearOption.innerText = i
+                    // birthYearEl의 자식 요소로 추가
+                    this.appendChild(YearOption);
+                }
+            }
+        });
+
+        const birthMonthEl = document.querySelector('#birth-month')
+        // option 목록 생성 여부 확인
+        isMonthOptionExisted = false;
+        birthMonthEl.addEventListener('focus', function () {
+            // month 목록 생성되지 않았을 때 (최초 클릭 시)
+            if (!isMonthOptionExisted) {
+                isMonthOptionExisted = true
+                for (var i = 1; i <= 12; i++) {
+                    // option element 생성
+                    const MonthOption = document.createElement('option')
+                    MonthOption.setAttribute('value', i)
+                    MonthOption.innerText = i
+                    // birthMonthEl의 자식 요소로 추가
+                    this.appendChild(MonthOption);
+                }
+            }
+        });
+
+        const birthDayEl = document.querySelector('#birth-day')
+        // option 목록 생성 여부 확인
+        isDayOptionExisted = false;
+        birthDayEl.addEventListener('focus', function () {
+            // year 목록 생성되지 않았을 때 (최초 클릭 시)
+            if (!isDayOptionExisted) {
+                isDayOptionExisted = true
+                for (var i = 1; i <= 31; i++) {
+                    // option element 생성
+                    const DayOption = document.createElement('option')
+                    DayOption.setAttribute('value', i)
+                    DayOption.innerText = i
+                    // birthDayEl의 자식 요소로 추가
+                    this.appendChild(DayOption);
+                }
+            }
+        });
+
+        //우편번호 검색
+        function execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function (data) {
+                    document.getElementById('zip-code').value = data.zonecode;
+                    document.getElementById('address-1').value = data.address;
+                    document.getElementById('address-2').focus();
+                }
+            }).open();
+        }
+    </script>
+
+
+    <!-- 약관동의 모달  -->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="space-betweens">
+                <div><span>[필수]</span> 아시아나클럽 일반 규정 및 홈페이지 이용 약관</div>
+                <img src="img/icon-index-modal-close.svg" id="closeModal" class="close">
+            </div>
+            <div>
+                1. 아시아나클럽 회원이 되기 위해서는 소정의 가입신청서를 작성 및 제출하셔야 합니다.<br>
+                2. 본 프로그램이 제한을 받지 않는 국가에 거주하시면 누구라도 가입 가능합니다. (단, 만 12세 미만의 어린이는 매직마일즈 회원으로 가입됩니다.)<br>
+                3. 마일리지 적립은 회원 가입일 이후에 탑승 또는 이용하신 경우에만 가능합니다.<br>
+                4. 아시아나클럽 회원 자격은 개별 1인에게만 주어지며 양도할 수 없습니다. 또한, 마일리지 적립, 마일리지 사용 등 회원 혜택은 회원 가입일로부터 회원 본인에게만 제공됩니다.<br>
+                5. 아시아나클럽 마일리지는 본인 사용 원칙입니다. 단, 아시아나항공이 정한 범위 내에서 가족합산 제도를 이용하여 등록된 가족회원간에 양도 또는 부족한 마일리지만큼 합산하여 사용하실 수
+                있습니다.
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="space-betweens">
+                <div><span>[필수]</span> 개인정보 수집 및 이용안내</div>
+                <img src="img/icon-index-modal-close.svg" id="closeModal" class="close">
+            </div>
+            <div>
+                ▶ 아시아나클럽 개인 정보 수집 및 이용 안내<br>
+                [개인정보의 수집 목적 및 이용]<br>
+                아시아나항공은 서비스 제공을 위해 회원의 동의를 얻어 개인정보를 수집하고 있습니다.<br><br>
+                [개인정보 수집 항목]<br>
+                가. 아시아나클럽 회원 가입 시<br>
+                - 필수항목 : 한글 및 영문 성명, 성별, 전화번호, 이메일, 거주지역, 본인 인증번호, 아이디,비밀번호<br>
+                - 만 14세 미만 회원 가입 시 추가 수집 항목 : 법정대리인의 성명,생년월일,이메일<br>
+                나. 아시아나클럽 가족회원 등록 : 가족관계를 증빙할 수 있는 서류<br><br>
+                [개인정보의 보유 및 이용기간]<br>
+                아시아나항공은 회원이 아시아나클럽을 탈퇴하거나 자격을 상실하는 경우 또는 수집목적을 달성하거나 사업을 폐업하는 경우에는 회원DB 삭제, 문서 파기 등의 방법으로 해당 개인정보를 1일내
+                파기하고 있습니다. 다만, 전자상거래 등에서의 소비자보호에 관한 법률 등 관련 법령의 규정에 의하여 보존하여야 하는 기록은 일정 기간 보관 후 파기합니다. (계약 또는 청약철회 등에 관한
+                기록: 5년, 대금결제 및 재화 등의 공급에 관한 기록: 5년, 소비자의 불만 또는 분쟁처리에 관한 기록: 3년)
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="space-betweens">
+                <div><span>[필수]</span> 개인정보 국외 이전 동의</div>
+                <img src="img/icon-index-modal-close.svg" id="closeModal" class="close">
+            </div>
+            <div>
+                아시아나항공에서는 항공여행시스템 제공 업체인 AMADEUS사에 당사의 예약 및 운송 시스템 운영을 위탁하고 있으며, 예약에 필요한 개인정보 국외 이전 사항은 다음과
+                같습니다.<br><br>
+
+                가. 개인정보를 이전받는 자<br>
+                - AMADEUS IT GROUP,S.A (dataprotection@amadeus.com)<br><br>
+
+                나. 이전하는 개인정보 항목<br>
+                - 항공권 예약시 : 아시아나클럽 회원번호, 탑승자 성명, 생년월일, 성별, 연락처, 이메일<br>
+                - 미국 출/도착 항공권 예약 시 : 여권정보 (여권번호, 만료일, 발급처, 국적)<br>
+                - 항공권 결제시 : 카드번호, 유효기간, 거래 인증번호(신용카드 결제 시), 거래번호(계좌이체 거래 시)<br>
+                - 회원 가입 및 회원정보 변경 시 : 아시아나클럽 회원번호, 회원등급, 회원자격 유효기간, 국/영문 성명, 생년월일, 국적, 거주지, 성별, 연락처, 이메일, 잔여마일, 최근2년
+                탑승횟수 및 적립마일<br><br>
+
+                다. 이전되는 국가, 이전 일시, 이전 방법<br>
+                - 예약 정보 : 독일, 예약 및 결제 완료 시, 공용 네트워크 이용 전송(보안 프로토콜 처리)<br>
+                - 회원 정보 : 독일, 회원가입 및 회원정보 변경 시, 전용 네트워크 이용 전송
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="space-betweens">
+                <div><span>[선택]</span> 마케팅 광고 활용 동의</div>
+                <img src="img/icon-index-modal-close.svg" id="closeModal" class="close">
+            </div>
+            <div>
+                아시아나항공은 이벤트 정보, 할인정보 등 마케팅 정보 제공을 위해 회원의 동의를 얻어 개인정보를 수집하고 있습니다.<br><br>
+                1. 개인정보 수집 항목(선택항목)<br>
+                - 회사명, 근무부서, 직위, 유선전화번호,주소,우편번호<br><br>
+                2. 개인정보의 보유기간 및 이용기간<br>
+                - 회원의 동의 하에 수집된 개인정보 항목 선택정보 제공 동의를 유지하고 있는 동안 이용됩니다. 단, 당사는 선택정보 제공 동의를 철회하거나 회원 탈퇴 요청이 있는 경우, 회원 자격을
+                상실하는 등 아시아나클럽 개인정보 처리방침에서 규정하는 개인정보의 수집 및 이용 목적이 달성된 때 수집된 개인정보를 지체 없이 파기하고 있습니다.<br><br>
+                3. 선택정보 제공 동의 거부<br>
+                - 회원은 선택정보 제공에 대한 동의를 거부할 권리가 있으며, 동의를 거부하더라도 회원 가입이 가능합니다.
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="space-betweens">
+                <div><span>[선택]</span> 개인정보 제 3자 제공 동의</div>
+                <img src="img/icon-index-modal-close.svg" id="closeModal" class="close">
+            </div>
+            <div>
+                1. 아시아나항공은 별도의 회원동의 없이 개인정보를 제 3자에게 제공하지 않습니다.(법률에 특별한 규정이 있는 경우 제외) 다만, 회원께서 아래의 제휴서비스 이용 시 다음의 최소한의
+                개인정보가 제공될 수 있습니다. >>제휴사 상세 보기<br><br>
+                2. 전항의 경우를 제외하고, 회원으로부터 제공받은 개인정보를 수집 목적 이외의 용도로 이용하거나 동의없이 제3자에게 제공함으로 인해 발생하는 피해에 대하여는 아시아나항공에게 책임이
+                있습니다. 다만, 회원이 고의나 과실로 자신의 개인정보를 유출하거나 허위의 정보를 제공한 경우 또는 개인정보에 변경이 발생하였음에도 이를 알리지 않아 불일치가 발생한 경우에는 그러하지
+                아니합니다.<br><br>
+                3. 선택정보 제공 동의 거부
+                - 개인정보 제3자 제공 동의를 거부하실 수 있습니다. 다만, 이 경우 신용카드사를 통한 잔여 마일리 확인 등 일부 서비스가 제한됩니다.
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 모달 여러개 열고 닫기 -->
+    <script>
+        var modals = document.getElementsByClassName("modal");
+        var btns = document.getElementsByClassName("view_more");
+        var spanes = document.getElementsByClassName("close");
+        var funcs = [];
+
+        currentP = window.scrollY;
+
+        // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+        function Modal(num) {
+            return function () {
+                // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+                btns[num].onclick = function () {
+                    document.body.style.overflowY = "hidden";
+                    modals[num].style.display = "block";
+                    modals[num].style.top = currentP + "px";
+                    console.log(num);
+                };
+                // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+                spanes[num].onclick = function () {
+                    modals[num].style.display = "none";
+                    document.body.style.removeProperty('overflow');
+                };
+            };
+        }
+
+        // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+        for (var i = 0; i < btns.length; i++) {
+            funcs[i] = Modal(i);
+        }
+        // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+        for (var j = 0; j < btns.length; j++) {
+            funcs[j]();
+        }
+
+        // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+        window.onclick = function (event) {
+            if (event.target.className == "modal") {
+                event.target.style.display = "none";
+                document.body.style.removeProperty('overflow');
+            }
+        };
+    </script>
+
+
+    <div w3-include-footer="footer.html"></div>
+
+    <script>
+        includeHEADER();
+        includeFOOTER();
+    </script>
+
+
+</body>
+
+</html>
